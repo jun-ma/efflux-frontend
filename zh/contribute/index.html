@@ -16,7 +16,7 @@
     
     
       
-        <title>Get started - Efflux Docs</title>
+        <title>Contribute - Efflux Docs</title>
       
     
     
@@ -58,7 +58,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#get-started" class="md-skip">
+        <a href="#how-to-get-involved" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Get started
+              Contribute
             
           </span>
         </div>
@@ -121,7 +121,7 @@
           </li>
         
           <li class="md-select__item">
-            <a href="../zh/get-started/" hreflang="zh" class="md-select__link">
+            <a href="../zh/contribute/" hreflang="zh" class="md-select__link">
               中文
             </a>
           </li>
@@ -336,55 +336,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#get-started" class="md-nav__link">
+  <a href="#how-to-get-involved" class="md-nav__link">
     <span class="md-ellipsis">
-      Get started
+      How to Get Involved
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Get started">
+    <nav class="md-nav" aria-label="How to Get Involved">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#commit-changes" class="md-nav__link">
     <span class="md-ellipsis">
-      Prerequisites
+      Commit Changes
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#1-clone-the-repository" class="md-nav__link">
+  <a href="#report-issues" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Clone the Repository
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-install-the-dependencies" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Install the Dependencies
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-set-the-environment-variables" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Set the Environment Variables
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-start-the-development-server" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Start the Development Server
+      Report Issues
     </span>
   </a>
   
@@ -411,76 +384,28 @@
 
 
 
-  <h1>Get started</h1>
+  <h1>Contribute</h1>
 
-<h2 id="get-started">Get started</h2>
-<h3 id="prerequisites">Prerequisites</h3>
-<p>Make sure you have Python 3.12 or higher versions installed and set up the <a href="https://github.com/isoftstone-data-intelligence-ai/efflux-backend?tab=readme-ov-file#quick-start">efflux backend service</a>.</p>
-<h3 id="1-clone-the-repository">1. Clone the Repository</h3>
-<p>In your terminal:</p>
-<pre><code>git clone https://github.com/isoftstone-data-intelligence-ai/efflux-frontend.git
-</code></pre>
-<h3 id="2-install-the-dependencies">2. Install the Dependencies</h3>
-<p>Enter the repository:</p>
-<pre><code>cd efflux-frontend
-</code></pre>
-<p>Run the following to install the required dependencies:</p>
-<pre><code>npm i
-</code></pre>
-<h3 id="3-set-the-environment-variables">3. Set the Environment Variables</h3>
-<p>Create a <code>.env.local</code> file and set the following:</p>
-<pre><code class="language-sh"># Get your API key here - https://e2b.dev/
-E2B_API_KEY=&quot;your-e2b-api-key&quot;
-
-# Get your Azure API key here https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource?tabs=portal
-AZURE_API_KEY=&quot;your-azure-api-key&quot;
-
-# API URL
-NEXT_PUBLIC_API_URL=&quot;your-backend-service-url&quot;
-
-# OpenAI API Key
-OPENAI_API_KEY=
-
-# Other providers
-ANTHROPIC_API_KEY=
-GROQ_API_KEY=
-FIREWORKS_API_KEY=
-TOGETHER_API_KEY=
-GOOGLE_AI_API_KEY=
-GOOGLE_VERTEX_CREDENTIALS=
-MISTRAL_API_KEY=
-XAI_API_KEY=
-
-### Optional env vars
-
-# Domain of the site
-NEXT_PUBLIC_SITE_URL=
-
-# Disabling API key and base URL input in the chat
-NEXT_PUBLIC_NO_API_KEY_INPUT=
-NEXT_PUBLIC_NO_BASE_URL_INPUT=
-
-# Rate limit
-RATE_LIMIT_MAX_REQUESTS=
-RATE_LIMIT_WINDOW=
-
-# Vercel/Upstash KV (short URLs, rate limiting)
-KV_REST_API_URL=
-KV_REST_API_TOKEN=
-
-# Supabase (auth)
-SUPABASE_URL=
-SUPABASE_ANON_KEY=
-
-# PostHog (analytics)
-NEXT_PUBLIC_POSTHOG_KEY=
-NEXT_PUBLIC_POSTHOG_HOST=
-</code></pre>
-<h3 id="4-start-the-development-server">4. Start the Development Server</h3>
-<pre><code>npm run dev
-</code></pre>
-<p>Then you can access your local efflux at http://localhost:3000. The landing page looks like the following:</p>
-<p><img alt="Efflux landing page" src="../../assets/landing-page.png" /></p>
+<h2 id="how-to-get-involved">How to Get Involved</h2>
+<p>We welcome contributions! Here's how you can get involved:</p>
+<h3 id="commit-changes">Commit Changes</h3>
+<ol>
+<li>Fork the repository.</li>
+<li>Create a new branch (<code>git checkout -b feature-branch</code>).</li>
+<li>Make your changes.</li>
+<li>Commit your changes (<code>git commit -am 'Add new feature'</code>).</li>
+<li>Push to your branch (<code>git push origin feature-branch</code>).</li>
+<li>Open a pull request.</li>
+</ol>
+<p>Make sure you follow the coding standards and guidelines defined in the project. See the Contributing Guidelines for more details.</p>
+<h3 id="report-issues">Report Issues</h3>
+<p>If you encounter any issues or bugs, feel free to open an issue in the respective repository. </p>
+<p>Be sure to include:</p>
+<ul>
+<li>A description of the issue.</li>
+<li>Steps to reproduce (if applicable).</li>
+<li>Logs or screenshots that can help in debugging.</li>
+</ul>
 
 
 
