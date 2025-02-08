@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://docs.github.io/efflux-frontend/get-started/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
     <title>Get started - Efflux Docs</title>
     <link rel="stylesheet" href="../css/theme.css" />
@@ -14,7 +14,7 @@
         // Current page data
         var mkdocs_page_name = "Get started";
         var mkdocs_page_input_path = "get-started.md";
-        var mkdocs_page_url = "/efflux-frontend/get-started/";
+        var mkdocs_page_url = null;
       </script>
     
     <!--[if lt IE 9]>
@@ -48,21 +48,23 @@
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#prerequisites">Prerequisites</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#1-clone-the-repository">1. Clone the repository</a>
+    <li class="toctree-l2"><a class="reference internal" href="#1-clone-the-repository">1. Clone the Repository</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#2-install-the-dependencies">2. Install the dependencies</a>
+    <li class="toctree-l2"><a class="reference internal" href="#2-install-the-dependencies">2. Install the Dependencies</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#3-set-the-environment-variables">3. Set the environment variables</a>
+    <li class="toctree-l2"><a class="reference internal" href="#3-set-the-environment-variables">3. Set the Environment Variables</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#4-start-the-development-server">4. Start the development server</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#5-build-the-web-app">5. Build the web app</a>
+    <li class="toctree-l2"><a class="reference internal" href="#4-start-the-development-server">4. Start the Development Server</a>
     </li>
     </ul>
                 </li>
               </ul>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../features/">Work with Efflux</a>
+                <li class="toctree-l1"><a class="reference internal" href="../generate-code/">Generate code</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../work-with-MCP-server/">Work with MCP server</a>
                 </li>
               </ul>
       </div>
@@ -90,36 +92,28 @@
               
                 <h2 id="get-started">Get started</h2>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>Make sure you have the following dependencies installed and set up the <a href="https://github.com/isoftstone-data-intelligence-ai/efflux-backend?tab=readme-ov-file#quick-start">efflux backend service</a>.</p>
-<ul>
-<li>
-<p>Python 3.12 or higher versions</p>
-</li>
-<li>
-<p>PostgreSQL</p>
-</li>
-</ul>
-<h3 id="1-clone-the-repository">1. Clone the repository</h3>
+<p>Make sure you have Python 3.12 or higher versions installed and set up the <a href="https://github.com/isoftstone-data-intelligence-ai/efflux-backend?tab=readme-ov-file#quick-start">efflux backend service</a>.</p>
+<h3 id="1-clone-the-repository">1. Clone the Repository</h3>
 <p>In your terminal:</p>
 <pre><code>git clone https://github.com/isoftstone-data-intelligence-ai/efflux-frontend.git
 </code></pre>
-<h3 id="2-install-the-dependencies">2. Install the dependencies</h3>
+<h3 id="2-install-the-dependencies">2. Install the Dependencies</h3>
 <p>Enter the repository:</p>
 <pre><code>cd efflux-frontend
 </code></pre>
 <p>Run the following to install the required dependencies:</p>
 <pre><code>npm i
 </code></pre>
-<h3 id="3-set-the-environment-variables">3. Set the environment variables</h3>
+<h3 id="3-set-the-environment-variables">3. Set the Environment Variables</h3>
 <p>Create a <code>.env.local</code> file and set the following:</p>
 <pre><code class="language-sh"># Get your API key here - https://e2b.dev/
 E2B_API_KEY=&quot;your-e2b-api-key&quot;
 
 # Get your Azure API key here https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource?tabs=portal
-AZURE_API_KEY=
+AZURE_API_KEY=&quot;your-azure-api-key&quot;
 
 # API URL
-NEXT_PUBLIC_API_URL=
+NEXT_PUBLIC_API_URL=&quot;your-backend-service-url&quot;
 
 # OpenAI API Key
 OPENAI_API_KEY=
@@ -159,18 +153,17 @@ SUPABASE_ANON_KEY=
 NEXT_PUBLIC_POSTHOG_KEY=
 NEXT_PUBLIC_POSTHOG_HOST=
 </code></pre>
-<h3 id="4-start-the-development-server">4. Start the development server</h3>
+<h3 id="4-start-the-development-server">4. Start the Development Server</h3>
 <pre><code>npm run dev
 </code></pre>
-<h3 id="5-build-the-web-app">5. Build the web app</h3>
-<pre><code>npm run build
-</code></pre>
+<p>Then you can access your local efflux at http://localhost:3000. The landing page looks like the following:</p>
+<p><img alt="Efflux landing page" src="../assets/landing-page.png" /></p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
         <a href=".." class="btn btn-neutral float-left" title="Welcome"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../features/" class="btn btn-neutral float-right" title="Work with Efflux">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../generate-code/" class="btn btn-neutral float-right" title="Generate code">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -196,7 +189,7 @@ NEXT_PUBLIC_POSTHOG_HOST=
       <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../features/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../generate-code/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
