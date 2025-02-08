@@ -1,73 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
-        <loc>https://jun-ma.github.io/efflux-frontend/index.html</loc>
+        <loc>https://jun-ma.github.io/efflux-frontend/</loc>
         <lastmod>2025-02-08</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://jun-ma.github.io/efflux-frontend/index.html"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://jun-ma.github.io/efflux-frontend/zh/index.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jun-ma.github.io/efflux-frontend/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jun-ma.github.io/efflux-frontend/zh/"/>
     </url>
     <url>
-        <loc>https://jun-ma.github.io/efflux-frontend/contribute.html</loc>
+        <loc>https://jun-ma.github.io/efflux-frontend/contribute/</loc>
         <lastmod>2025-02-08</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://jun-ma.github.io/efflux-frontend/contribute.html"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://jun-ma.github.io/efflux-frontend/zh/contribute.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jun-ma.github.io/efflux-frontend/contribute/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jun-ma.github.io/efflux-frontend/zh/contribute/"/>
     </url>
     <url>
-        <loc>https://jun-ma.github.io/efflux-frontend/generate-code.html</loc>
+        <loc>https://jun-ma.github.io/efflux-frontend/generate-code/</loc>
         <lastmod>2025-02-08</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://jun-ma.github.io/efflux-frontend/generate-code.html"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://jun-ma.github.io/efflux-frontend/zh/generate-code.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jun-ma.github.io/efflux-frontend/generate-code/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jun-ma.github.io/efflux-frontend/zh/generate-code/"/>
     </url>
     <url>
-        <loc>https://jun-ma.github.io/efflux-frontend/get-started.html</loc>
+        <loc>https://jun-ma.github.io/efflux-frontend/get-started/</loc>
         <lastmod>2025-02-08</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://jun-ma.github.io/efflux-frontend/get-started.html"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://jun-ma.github.io/efflux-frontend/zh/get-started.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jun-ma.github.io/efflux-frontend/get-started/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jun-ma.github.io/efflux-frontend/zh/get-started/"/>
     </url>
     <url>
-        <loc>https://jun-ma.github.io/efflux-frontend/work-with-MCP-server.html</loc>
+        <loc>https://jun-ma.github.io/efflux-frontend/work-with-MCP-server/</loc>
         <lastmod>2025-02-08</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://jun-ma.github.io/efflux-frontend/work-with-MCP-server.html"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://jun-ma.github.io/efflux-frontend/zh/work-with-MCP-server.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jun-ma.github.io/efflux-frontend/work-with-MCP-server/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jun-ma.github.io/efflux-frontend/zh/work-with-MCP-server/"/>
     </url>
     <url>
-        <loc>https://jun-ma.github.io/efflux-frontend/zh/index.html</loc>
+        <loc>https://jun-ma.github.io/efflux-frontend/zh/</loc>
         <lastmod>2025-02-08</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://jun-ma.github.io/efflux-frontend/zh/index.html"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://jun-ma.github.io/efflux-frontend/index.html"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jun-ma.github.io/efflux-frontend/zh/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jun-ma.github.io/efflux-frontend/"/>
     </url>
     <url>
-        <loc>https://jun-ma.github.io/efflux-frontend/zh/contribute.html</loc>
+        <loc>https://jun-ma.github.io/efflux-frontend/zh/contribute/</loc>
         <lastmod>2025-02-08</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://jun-ma.github.io/efflux-frontend/zh/contribute.html"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://jun-ma.github.io/efflux-frontend/contribute.html"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jun-ma.github.io/efflux-frontend/zh/contribute/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jun-ma.github.io/efflux-frontend/contribute/"/>
     </url>
     <url>
-        <loc>https://jun-ma.github.io/efflux-frontend/zh/generate-code.html</loc>
+        <loc>https://jun-ma.github.io/efflux-frontend/zh/generate-code/</loc>
         <lastmod>2025-02-08</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://jun-ma.github.io/efflux-frontend/zh/generate-code.html"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://jun-ma.github.io/efflux-frontend/generate-code.html"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jun-ma.github.io/efflux-frontend/zh/generate-code/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jun-ma.github.io/efflux-frontend/generate-code/"/>
     </url>
     <url>
-        <loc>https://jun-ma.github.io/efflux-frontend/zh/get-started.html</loc>
+        <loc>https://jun-ma.github.io/efflux-frontend/zh/get-started/</loc>
         <lastmod>2025-02-08</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://jun-ma.github.io/efflux-frontend/zh/get-started.html"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://jun-ma.github.io/efflux-frontend/get-started.html"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jun-ma.github.io/efflux-frontend/zh/get-started/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jun-ma.github.io/efflux-frontend/get-started/"/>
     </url>
     <url>
-        <loc>https://jun-ma.github.io/efflux-frontend/zh/work-with-MCP-server.html</loc>
+        <loc>https://jun-ma.github.io/efflux-frontend/zh/work-with-MCP-server/</loc>
         <lastmod>2025-02-08</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://jun-ma.github.io/efflux-frontend/zh/work-with-MCP-server.html"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://jun-ma.github.io/efflux-frontend/work-with-MCP-server.html"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jun-ma.github.io/efflux-frontend/zh/work-with-MCP-server/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jun-ma.github.io/efflux-frontend/work-with-MCP-server/"/>
     </url>
 </urlset>
