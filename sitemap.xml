@@ -1,3 +1,115 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>Noneen/</loc>
+        <lastmod>2025-02-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/en/"/>
+    </url>
+    <url>
+        <loc>Noneen/contribute/</loc>
+        <lastmod>2025-02-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/contribute/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/en/contribute/"/>
+    </url>
+    <url>
+        <loc>Noneen/contributing/</loc>
+        <lastmod>2025-02-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/contributing/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/en/contributing/"/>
+    </url>
+    <url>
+        <loc>Noneen/generate-code/</loc>
+        <lastmod>2025-02-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/generate-code/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/en/generate-code/"/>
+    </url>
+    <url>
+        <loc>Noneen/get-started/</loc>
+        <lastmod>2025-02-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/get-started/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/en/get-started/"/>
+    </url>
+    <url>
+        <loc>Noneen/work-with-MCP-server/</loc>
+        <lastmod>2025-02-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work-with-MCP-server/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/en/work-with-MCP-server/"/>
+    </url>
+    <url>
+        <loc>Nonezh/</loc>
+        <lastmod>2025-02-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonezh/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/zh/"/>
+    </url>
+    <url>
+        <loc>Nonezh/get-started/</loc>
+        <lastmod>2025-02-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonezh/get-started/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/zh/get-started/"/>
+    </url>
+    <url>
+        <loc>Nonezh/en/</loc>
+        <lastmod>2025-02-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/en/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/"/>
+    </url>
+    <url>
+        <loc>Nonezh/en/contribute/</loc>
+        <lastmod>2025-02-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/en/contribute/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/contribute/"/>
+    </url>
+    <url>
+        <loc>Nonezh/en/contributing/</loc>
+        <lastmod>2025-02-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/en/contributing/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/contributing/"/>
+    </url>
+    <url>
+        <loc>Nonezh/en/generate-code/</loc>
+        <lastmod>2025-02-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/en/generate-code/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/generate-code/"/>
+    </url>
+    <url>
+        <loc>Nonezh/en/get-started/</loc>
+        <lastmod>2025-02-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/en/get-started/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/get-started/"/>
+    </url>
+    <url>
+        <loc>Nonezh/en/work-with-MCP-server/</loc>
+        <lastmod>2025-02-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/en/work-with-MCP-server/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work-with-MCP-server/"/>
+    </url>
+    <url>
+        <loc>Nonezh/zh/</loc>
+        <lastmod>2025-02-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/zh/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonezh/"/>
+    </url>
+    <url>
+        <loc>Nonezh/zh/get-started/</loc>
+        <lastmod>2025-02-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/zh/get-started/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonezh/get-started/"/>
+    </url>
 </urlset>
