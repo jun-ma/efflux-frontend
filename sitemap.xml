@@ -1,115 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
-        <loc>Noneen/</loc>
+        <loc>https://jun-ma.github.io/efflux-frontend/index.html</loc>
         <lastmod>2025-02-08</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/en/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jun-ma.github.io/efflux-frontend/index.html"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jun-ma.github.io/efflux-frontend/zh/index.html"/>
     </url>
     <url>
-        <loc>Noneen/contribute/</loc>
+        <loc>https://jun-ma.github.io/efflux-frontend/contribute.html</loc>
         <lastmod>2025-02-08</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/contribute/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/en/contribute/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jun-ma.github.io/efflux-frontend/contribute.html"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jun-ma.github.io/efflux-frontend/zh/contribute.html"/>
     </url>
     <url>
-        <loc>Noneen/generate-code/</loc>
+        <loc>https://jun-ma.github.io/efflux-frontend/generate-code.html</loc>
         <lastmod>2025-02-08</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/generate-code/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/en/generate-code/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jun-ma.github.io/efflux-frontend/generate-code.html"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jun-ma.github.io/efflux-frontend/zh/generate-code.html"/>
     </url>
     <url>
-        <loc>Noneen/get-started/</loc>
+        <loc>https://jun-ma.github.io/efflux-frontend/get-started.html</loc>
         <lastmod>2025-02-08</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/get-started/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/en/get-started/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jun-ma.github.io/efflux-frontend/get-started.html"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jun-ma.github.io/efflux-frontend/zh/get-started.html"/>
     </url>
     <url>
-        <loc>Noneen/work-with-MCP-server/</loc>
+        <loc>https://jun-ma.github.io/efflux-frontend/work-with-MCP-server.html</loc>
         <lastmod>2025-02-08</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work-with-MCP-server/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/en/work-with-MCP-server/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jun-ma.github.io/efflux-frontend/work-with-MCP-server.html"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jun-ma.github.io/efflux-frontend/zh/work-with-MCP-server.html"/>
     </url>
     <url>
-        <loc>Nonezh/</loc>
+        <loc>https://jun-ma.github.io/efflux-frontend/zh/index.html</loc>
         <lastmod>2025-02-08</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonezh/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/zh/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jun-ma.github.io/efflux-frontend/zh/index.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jun-ma.github.io/efflux-frontend/index.html"/>
     </url>
     <url>
-        <loc>Nonezh/contribute/</loc>
+        <loc>https://jun-ma.github.io/efflux-frontend/zh/contribute.html</loc>
         <lastmod>2025-02-08</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonezh/contribute/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/zh/contribute/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jun-ma.github.io/efflux-frontend/zh/contribute.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jun-ma.github.io/efflux-frontend/contribute.html"/>
     </url>
     <url>
-        <loc>Nonezh/get-started/</loc>
+        <loc>https://jun-ma.github.io/efflux-frontend/zh/generate-code.html</loc>
         <lastmod>2025-02-08</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonezh/get-started/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/zh/get-started/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jun-ma.github.io/efflux-frontend/zh/generate-code.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jun-ma.github.io/efflux-frontend/generate-code.html"/>
     </url>
     <url>
-        <loc>Nonezh/en/</loc>
+        <loc>https://jun-ma.github.io/efflux-frontend/zh/get-started.html</loc>
         <lastmod>2025-02-08</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/en/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jun-ma.github.io/efflux-frontend/zh/get-started.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jun-ma.github.io/efflux-frontend/get-started.html"/>
     </url>
     <url>
-        <loc>Nonezh/en/contribute/</loc>
+        <loc>https://jun-ma.github.io/efflux-frontend/zh/work-with-MCP-server.html</loc>
         <lastmod>2025-02-08</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/en/contribute/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/contribute/"/>
-    </url>
-    <url>
-        <loc>Nonezh/en/generate-code/</loc>
-        <lastmod>2025-02-08</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/en/generate-code/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/generate-code/"/>
-    </url>
-    <url>
-        <loc>Nonezh/en/get-started/</loc>
-        <lastmod>2025-02-08</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/en/get-started/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/get-started/"/>
-    </url>
-    <url>
-        <loc>Nonezh/en/work-with-MCP-server/</loc>
-        <lastmod>2025-02-08</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/en/work-with-MCP-server/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/work-with-MCP-server/"/>
-    </url>
-    <url>
-        <loc>Nonezh/zh/</loc>
-        <lastmod>2025-02-08</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/zh/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonezh/"/>
-    </url>
-    <url>
-        <loc>Nonezh/zh/contribute/</loc>
-        <lastmod>2025-02-08</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/zh/contribute/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonezh/contribute/"/>
-    </url>
-    <url>
-        <loc>Nonezh/zh/get-started/</loc>
-        <lastmod>2025-02-08</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/zh/get-started/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonezh/get-started/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jun-ma.github.io/efflux-frontend/zh/work-with-MCP-server.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jun-ma.github.io/efflux-frontend/work-with-MCP-server.html"/>
     </url>
 </urlset>
