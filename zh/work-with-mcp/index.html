@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://jun-ma.github.io/efflux-frontend/zh/get-started/">
+        <link rel="canonical" href="https://jun-ma.github.io/efflux-frontend/zh/work-with-mcp/">
       
       
-        <link rel="prev" href="../">
+        <link rel="prev" href="../generate-code/">
       
       
-        <link rel="next" href="../generate-code/">
+        <link rel="next" href="../contribute/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Set up Efflux - Efflux Docs</title>
+        <title>Work with MCP - Efflux Docs</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#prerequisites" class="md-skip">
+        <a href="#connect-to-data-sources" class="md-skip">
           跳转至
         </a>
       
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Set up Efflux
+              Work with MCP
             
           </span>
         </div>
@@ -129,7 +129,7 @@
       <ul class="md-select__list">
         
           <li class="md-select__item">
-            <a href="../../get-started/" hreflang="en" class="md-select__link">
+            <a href="../../work-with-mcp/" hreflang="en" class="md-select__link">
               English
             </a>
           </li>
@@ -245,29 +245,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    快速开始
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../get-started/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -277,78 +258,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    <span class="md-ellipsis">
-      Prerequisites
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#1-clone-the-repository" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Clone the Repository
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-install-the-dependencies" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Install the Dependencies
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-set-the-environment-variables" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Set the Environment Variables
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-start-the-development-server" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Start the Development Server
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#whats-next" class="md-nav__link">
-    <span class="md-ellipsis">
-      What's Next?
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -378,10 +287,29 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../work-with-mcp/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    使用MCP
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -391,6 +319,42 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#connect-to-data-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connect to Data Sources
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connect-to-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connect to Tools
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -441,54 +405,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#connect-to-data-sources" class="md-nav__link">
     <span class="md-ellipsis">
-      Prerequisites
+      Connect to Data Sources
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#1-clone-the-repository" class="md-nav__link">
+  <a href="#connect-to-tools" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Clone the Repository
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-install-the-dependencies" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Install the Dependencies
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-set-the-environment-variables" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Set the Environment Variables
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-start-the-development-server" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Start the Development Server
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#whats-next" class="md-nav__link">
-    <span class="md-ellipsis">
-      What's Next?
+      Connect to Tools
     </span>
   </a>
   
@@ -510,37 +438,92 @@
 
 
 
-  <h1>快速开始</h1>
+  <h1>使用MCP</h1>
 
-<h2 id="prerequisites">Prerequisites</h2>
-<p>Make sure the following dependencies have been installed:</p>
+<p>Model Context Protocol (MCP) is an open standard that enables frontier AI models to produce more relevant responses by safely interacting with external tools and resources where data lives.</p>
 <ul>
-<li>
-<p>Python 3.12 or higher versions</p>
-</li>
-<li>
-<p>Node.js 18 or higher versions</p>
-</li>
-<li>
-<p><a href="https://git-scm.com/downloads">Git</a></p>
-</li>
-<li>
-<p><a href="https://github.com/isoftstone-data-intelligence-ai/efflux-backend?tab=readme-ov-file#quick-start">Efflux backend service</a></p>
-</li>
+<li><strong>Resources</strong>: Data (like API responses or file contents) that can be read by the selected LLM.</li>
+<li><strong>Tools</strong>: Functions that can be called by the selected LLM.</li>
 </ul>
-<h2 id="1-clone-the-repository">1. Clone the Repository</h2>
-<p>In your terminal:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>git clone https://github.com/isoftstone-data-intelligence-ai/efflux-frontend.git
+<p>Efflux's native MCP support helps you build secure and controlled access to your external data sources and tools, and then chat with them to get grounded information. </p>
+<p>For a comprehensive list of reference implementations of MCP servers, visit the <a href="https://github.com/modelcontextprotocol/servers">open repo</a>.</p>
+<h2 id="connect-to-data-sources">Connect to Data Sources</h2>
+<p>This section introduces how to set up an MCP connector to extend your data sources.</p>
+<ol>
+<li>
+<p>Prepare a database file named <code>demo.db</code> in the root directory of the efflux-backend service. Let's say, the file contains the following data:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code>Product List
+
+| ID | Name       | Price  | Stock | Description                   |
+|----|------------|--------|-------|-------------------------------|
+| 1  | Laptop     | 999.99 | 50    | High-performance laptop       |
+| 2  | Smartphone | 699.99 | 100   | Latest model smartphone       |
+| 3  | Headphones | 199.99 | 200   | Noise cancelling headphones   |
+| 4  | Smartwatch | 299.99 | 150   | Feature-packed smartwatch     |
+| 5  | Tablet     | 399.99 | 80    | 10-inch screen tablet         |
 </code></pre></div></td></tr></table></div>
-<h2 id="2-install-the-dependencies">2. Install the Dependencies</h2>
-<p>Enter the repository:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>cd efflux-frontend
+</li>
+<li>
+<p>Select <strong>MCP</strong> in the <strong>Tools</strong> dropdown of Efflux, and click the <strong>Settings</strong> icon to add an MCP server with the following parameters.</p>
+<p><img alt="Add MCP Server" src="../../assets/add-mcp-server.png" /></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;sqlite&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uvx&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;args&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="s2">&quot;mcp-server-sqlite&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;--db-path&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;./demo.db&quot;</span>
+<span class="w">        </span><span class="p">]</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>Run the following to install the required dependencies:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>npm i
+</li>
+<li>
+<p>Select <strong>sqlite</strong> in the <strong>Servers</strong> dropdown, and prompt Efflux, for example, <code>list top 3 most expensive products</code>.</p>
+<p>Then you will get a response as follows:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code>Tool Calls: read_query Args: query: SELECT name, price FROM products ORDER BY price DESC LIMIT 3
+
+The top 3 most expensive products in your database are:
+
+Laptop with a price of 999.99
+
+Smartphone with a price of 699.99
+
+Tablet with a price of 399.99
+
+These products are listed in descending order based on their price.
 </code></pre></div></td></tr></table></div>
-<h2 id="3-set-the-environment-variables">3. Set the Environment Variables</h2>
-<p>Create a <code>.env.local</code> file and set the following:</p>
+</li>
+<li>
+<p>Continue to talk to Effllux based on your needs, for example, <code>can you provide a more structured reply with more information?</code>.</p>
+<p>Then you will get a response as follows:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -553,100 +536,89 @@
 <span class="normal">10</span>
 <span class="normal">11</span>
 <span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Get your API key here - https://e2b.dev/</span>
-<span class="nv">E2B_API_KEY</span><span class="o">=</span><span class="s2">&quot;your-e2b-api-key&quot;</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code>Certainly! To provide a more detailed and structured reply, I will first retrieve comprehensive information for the top 3 most expensive products from the `products` table. Let&#39;s gather that information now.
 
-<span class="c1"># Get your Azure API key here https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource?tabs=portal</span>
-<span class="nv">AZURE_API_KEY</span><span class="o">=</span><span class="s2">&quot;your-azure-api-key&quot;</span>
+### Top 3 Most Expensive Products
 
-<span class="c1"># API URL</span>
-<span class="nv">NEXT_PUBLIC_API_URL</span><span class="o">=</span><span class="s2">&quot;your-backend-service-url&quot;</span>
+Below is a detailed and structured list of the top 3 most expensive products from your database, ordered by price in descending order:
 
-<span class="c1"># OpenAI API Key</span>
-<span class="nv">OPENAI_API_KEY</span><span class="o">=</span>
+| ID | Name         | Price    | Stock | Description                  |
+|----|--------------|----------|-------|------------------------------|
+| 1  | Laptop       | $999.99  | 50    | High-performance laptop      |
+| 2  | Smartphone   | $699.99  | 100   | Latest model smartphone      |
+| 5  | Tablet       | $399.99  | 80    | 10-inch screen tablet        |
 
-<span class="c1"># Other providers</span>
-<span class="nv">ANTHROPIC_API_KEY</span><span class="o">=</span>
-<span class="nv">GROQ_API_KEY</span><span class="o">=</span>
-<span class="nv">FIREWORKS_API_KEY</span><span class="o">=</span>
-<span class="nv">TOGETHER_API_KEY</span><span class="o">=</span>
-<span class="nv">GOOGLE_AI_API_KEY</span><span class="o">=</span>
-<span class="nv">GOOGLE_VERTEX_CREDENTIALS</span><span class="o">=</span>
-<span class="nv">MISTRAL_API_KEY</span><span class="o">=</span>
-<span class="nv">XAI_API_KEY</span><span class="o">=</span>
-
-<span class="c1">### Optional env vars</span>
-
-<span class="c1"># Domain of the site</span>
-<span class="nv">NEXT_PUBLIC_SITE_URL</span><span class="o">=</span>
-
-<span class="c1"># Disabling API key and base URL input in the chat</span>
-<span class="nv">NEXT_PUBLIC_NO_API_KEY_INPUT</span><span class="o">=</span>
-<span class="nv">NEXT_PUBLIC_NO_BASE_URL_INPUT</span><span class="o">=</span>
-
-<span class="c1"># Rate limit</span>
-<span class="nv">RATE_LIMIT_MAX_REQUESTS</span><span class="o">=</span>
-<span class="nv">RATE_LIMIT_WINDOW</span><span class="o">=</span>
-
-<span class="c1"># Vercel/Upstash KV (short URLs, rate limiting)</span>
-<span class="nv">KV_REST_API_URL</span><span class="o">=</span>
-<span class="nv">KV_REST_API_TOKEN</span><span class="o">=</span>
-
-<span class="c1"># Supabase (auth)</span>
-<span class="nv">SUPABASE_URL</span><span class="o">=</span>
-<span class="nv">SUPABASE_ANON_KEY</span><span class="o">=</span>
-
-<span class="c1"># PostHog (analytics)</span>
-<span class="nv">NEXT_PUBLIC_POSTHOG_KEY</span><span class="o">=</span>
-<span class="nv">NEXT_PUBLIC_POSTHOG_HOST</span><span class="o">=</span>
+These products are listed with additional details including their stock levels and descriptions. If you require any more information or further assistance, please let me know!
 </code></pre></div></td></tr></table></div>
-<h2 id="4-start-the-development-server">4. Start the Development Server</h2>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>npm run dev
-</code></pre></div></td></tr></table></div>
-<p>Then you can access your local efflux at http://localhost:3000. The landing page looks like the following:</p>
-<p><img alt="Efflux landing page" src="../../assets/landing-page.png" /></p>
-<h2 id="whats-next">What's Next?</h2>
-<ul>
+</li>
+</ol>
+<h2 id="connect-to-tools">Connect to Tools</h2>
+<p>This section introduces how to set up an MCP connector to utilize a function.</p>
+<ol>
 <li>
-<p><a href="../generate-code/">Generate Code</a></p>
+<p>Prepare a python file named <code>addition-operator.py</code> to the <code>/core/mcp/server/</code> directory of the efflux-backend service. Let's say, the file contains the following script to perform an addition operation:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">fastmcp</span><span class="w"> </span><span class="kn">import</span> <span class="n">FastMCP</span>
+
+
+<span class="c1"># Create an MCP server</span>
+<span class="n">mcp</span> <span class="o">=</span> <span class="n">FastMCP</span><span class="p">(</span><span class="s2">&quot;Demo&quot;</span><span class="p">)</span>
+
+
+<span class="c1"># Add an addition tool</span>
+<span class="nd">@mcp</span><span class="o">.</span><span class="n">tool</span><span class="p">()</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Add two numbers&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+</code></pre></div></td></tr></table></div>
 </li>
 <li>
-<p><a href="work-with-MCP-server.md">Work with MCP Server</a> </p>
+<p>Select <strong>MCP</strong> in the <strong>Tools</strong> dropdown of Efflux, and click the <strong>Settings</strong> icon to add an MCP server with the following parameters.</p>
+<p><img alt="Add MCP Server" src="../../assets/add-mcp-operator.png" /></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;Addition&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uvx&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;args&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="s2">&quot;--with&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;fastmcp&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;fastmcp&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;run&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;./core/mcp/server/addition-operator.py&quot;</span>
+<span class="w">        </span><span class="p">]</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 </li>
-</ul>
+<li>
+<p>Select <strong>Addition</strong> in the <strong>Servers</strong> dropdown, and prompt Efflux, for example, <code>121+234=?</code>.</p>
+<p>Then you will get a response as follows:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>Tool Calls: add Args: a: 121 b: 234
+The result of adding 121 and 234 is 355.
+</code></pre></div></td></tr></table></div>
+</li>
+</ol>
 
 
 

@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://jun-ma.github.io/efflux-frontend/generate-code/">
+        <link rel="canonical" href="https://jun-ma.github.io/efflux-frontend/work-with-mcp/">
       
       
-        <link rel="prev" href="../get-started/">
+        <link rel="prev" href="../generate-code/">
       
       
-        <link rel="next" href="../work-with-mcp/">
+        <link rel="next" href="../contribute/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Generate Code for UI Components - Efflux Docs</title>
+        <title>Work with MCP - Efflux Docs</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#generate-code-for-ui-components" class="md-skip">
+        <a href="#connect-to-data-sources" class="md-skip">
           Skip to content
         </a>
       
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Generate Code for UI Components
+              Work with MCP
             
           </span>
         </div>
@@ -135,7 +135,7 @@
           </li>
         
           <li class="md-select__item">
-            <a href="../zh/generate-code/" hreflang="zh" class="md-select__link">
+            <a href="../zh/work-with-mcp/" hreflang="zh" class="md-select__link">
               中文
             </a>
           </li>
@@ -266,6 +266,27 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../generate-code/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Generate Code
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -275,14 +296,12 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
   <span class="md-ellipsis">
-    Generate Code
+    Work with MCP
     
   </span>
   
@@ -294,7 +313,7 @@
         
   
   <span class="md-ellipsis">
-    Generate Code
+    Work with MCP
     
   </span>
   
@@ -307,8 +326,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -317,18 +334,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#how-it-works" class="md-nav__link">
+  <a href="#connect-to-data-sources" class="md-nav__link">
     <span class="md-ellipsis">
-      How it Works
+      Connect to Data Sources
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
+  <a href="#connect-to-tools" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
+      Connect to Tools
     </span>
   </a>
   
@@ -338,27 +355,6 @@
   
 </nav>
       
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../work-with-mcp/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Work with MCP
-    
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -401,8 +397,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -411,18 +405,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#how-it-works" class="md-nav__link">
+  <a href="#connect-to-data-sources" class="md-nav__link">
     <span class="md-ellipsis">
-      How it Works
+      Connect to Data Sources
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
+  <a href="#connect-to-tools" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
+      Connect to Tools
     </span>
   </a>
   
@@ -444,21 +438,187 @@
 
 
 
-<h1 id="generate-code-for-ui-components">Generate Code for UI Components</h1>
-<p>Efflux provides a chat-based interface where you can input text prompts and attach image files to get responses with generative code snippets of UI components. It supports real-time editing and customization to improve front-end development efficiency.</p>
-<p><img alt="Efflux demo" src="../assets/code-login.gif" /></p>
-<h2 id="how-it-works">How it Works</h2>
+  <h1>Work with MCP</h1>
+
+<p>Model Context Protocol (MCP) is an open standard that enables frontier AI models to produce more relevant responses by safely interacting with external tools and resources where data lives.</p>
+<ul>
+<li><strong>Resources</strong>: Data (like API responses or file contents) that can be read by the selected LLM.</li>
+<li><strong>Tools</strong>: Functions that can be called by the selected LLM.</li>
+</ul>
+<p>Efflux's native MCP support helps you build secure and controlled access to your external data sources and tools, and then chat with them to get grounded information. </p>
+<p>For a comprehensive list of reference implementations of MCP servers, visit the <a href="https://github.com/modelcontextprotocol/servers">open repo</a>.</p>
+<h2 id="connect-to-data-sources">Connect to Data Sources</h2>
+<p>This section introduces how to set up an MCP connector to extend your data sources.</p>
 <ol>
-<li><strong>Input Prompt</strong>: Type text descriptions or upload images to let Efflux understand the required interface you want to build.</li>
-<li><strong>Generate Code</strong>: Efflux generates code using open-source tools, like React, Tailwind CSS, and Shadcn UI, based on your prompt.</li>
-<li><strong>Preview and Edit</strong>: Preview the rendered code and make real-time edits in Efflux to fit your needs.</li>
-<li><strong>Integrate Code</strong>: Copy and paste the desired code into your application.</li>
+<li>
+<p>Prepare a database file named <code>demo.db</code> in the root directory of the efflux-backend service. Let's say, the file contains the following data:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code>Product List
+
+| ID | Name       | Price  | Stock | Description                   |
+|----|------------|--------|-------|-------------------------------|
+| 1  | Laptop     | 999.99 | 50    | High-performance laptop       |
+| 2  | Smartphone | 699.99 | 100   | Latest model smartphone       |
+| 3  | Headphones | 199.99 | 200   | Noise cancelling headphones   |
+| 4  | Smartwatch | 299.99 | 150   | Feature-packed smartwatch     |
+| 5  | Tablet     | 399.99 | 80    | 10-inch screen tablet         |
+</code></pre></div></td></tr></table></div>
+</li>
+<li>
+<p>Select <strong>MCP</strong> in the <strong>Tools</strong> dropdown of Efflux, and click the <strong>Settings</strong> icon to add an MCP server with the following parameters.</p>
+<p><img alt="Add MCP Server" src="../assets/add-mcp-server.png" /></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;sqlite&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uvx&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;args&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="s2">&quot;mcp-server-sqlite&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;--db-path&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;./demo.db&quot;</span>
+<span class="w">        </span><span class="p">]</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</li>
+<li>
+<p>Select <strong>sqlite</strong> in the <strong>Servers</strong> dropdown, and prompt Efflux, for example, <code>list top 3 most expensive products</code>.</p>
+<p>Then you will get a response as follows:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code>Tool Calls: read_query Args: query: SELECT name, price FROM products ORDER BY price DESC LIMIT 3
+
+The top 3 most expensive products in your database are:
+
+Laptop with a price of 999.99
+
+Smartphone with a price of 699.99
+
+Tablet with a price of 399.99
+
+These products are listed in descending order based on their price.
+</code></pre></div></td></tr></table></div>
+</li>
+<li>
+<p>Continue to talk to Effllux based on your needs, for example, <code>can you provide a more structured reply with more information?</code>.</p>
+<p>Then you will get a response as follows:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code>Certainly! To provide a more detailed and structured reply, I will first retrieve comprehensive information for the top 3 most expensive products from the `products` table. Let&#39;s gather that information now.
+
+### Top 3 Most Expensive Products
+
+Below is a detailed and structured list of the top 3 most expensive products from your database, ordered by price in descending order:
+
+| ID | Name         | Price    | Stock | Description                  |
+|----|--------------|----------|-------|------------------------------|
+| 1  | Laptop       | $999.99  | 50    | High-performance laptop      |
+| 2  | Smartphone   | $699.99  | 100   | Latest model smartphone      |
+| 5  | Tablet       | $399.99  | 80    | 10-inch screen tablet        |
+
+These products are listed with additional details including their stock levels and descriptions. If you require any more information or further assistance, please let me know!
+</code></pre></div></td></tr></table></div>
+</li>
 </ol>
-<h2 id="example">Example</h2>
-<p>This is an example of getting a code snippet for a simple login page.</p>
-<p><img alt="Efflux code response" src="../assets/generate-code.png" /></p>
-<p>On the <strong>Preview</strong> tab, you can check out the rendered code.</p>
-<p><img alt="Efflux code-GUI preview" src="../assets/code-gui-preview.png" /></p>
+<h2 id="connect-to-tools">Connect to Tools</h2>
+<p>This section introduces how to set up an MCP connector to utilize a function.</p>
+<ol>
+<li>
+<p>Prepare a python file named <code>addition-operator.py</code> to the <code>/core/mcp/server/</code> directory of the efflux-backend service. Let's say, the file contains the following script to perform an addition operation:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">fastmcp</span><span class="w"> </span><span class="kn">import</span> <span class="n">FastMCP</span>
+
+
+<span class="c1"># Create an MCP server</span>
+<span class="n">mcp</span> <span class="o">=</span> <span class="n">FastMCP</span><span class="p">(</span><span class="s2">&quot;Demo&quot;</span><span class="p">)</span>
+
+
+<span class="c1"># Add an addition tool</span>
+<span class="nd">@mcp</span><span class="o">.</span><span class="n">tool</span><span class="p">()</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Add two numbers&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+</code></pre></div></td></tr></table></div>
+</li>
+<li>
+<p>Select <strong>MCP</strong> in the <strong>Tools</strong> dropdown of Efflux, and click the <strong>Settings</strong> icon to add an MCP server with the following parameters.</p>
+<p><img alt="Add MCP Server" src="../assets/add-mcp-operator.png" /></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;Addition&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uvx&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;args&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="s2">&quot;--with&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;fastmcp&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;fastmcp&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;run&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;./core/mcp/server/addition-operator.py&quot;</span>
+<span class="w">        </span><span class="p">]</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</li>
+<li>
+<p>Select <strong>Addition</strong> in the <strong>Servers</strong> dropdown, and prompt Efflux, for example, <code>121+234=?</code>.</p>
+<p>Then you will get a response as follows:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>Tool Calls: add Args: a: 121 b: 234
+The result of adding 121 and 234 is 355.
+</code></pre></div></td></tr></table></div>
+</li>
+</ol>
 
 
 

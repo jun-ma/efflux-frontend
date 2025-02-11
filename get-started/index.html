@@ -22,13 +22,19 @@
     
     
       
-        <title>Get Started - Efflux Docs</title>
+        <title>Set up Efflux - Efflux Docs</title>
       
     
     
       <link rel="stylesheet" href="../assets/stylesheets/main.d7758b05.min.css">
       
       
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 13h-4v4h-2v-4H7v-2h4V7h2v4h4m-5-9A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2"/></svg>');}</style>
 
 
     
@@ -44,6 +50,8 @@
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
     
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -64,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#get-started" class="md-skip">
+        <a href="#prerequisites" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Get Started
+              Set up Efflux
             
           </span>
         </div>
@@ -223,7 +231,7 @@
         
   
   <span class="md-ellipsis">
-    Welcome
+    Overview
     
   </span>
   
@@ -284,16 +292,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#get-started" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get started
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Get started">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
       Prerequisites
@@ -301,8 +299,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#1-clone-the-repository" class="md-nav__link">
     <span class="md-ellipsis">
       1. Clone the Repository
@@ -310,8 +308,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#2-install-the-dependencies" class="md-nav__link">
     <span class="md-ellipsis">
       2. Install the Dependencies
@@ -319,8 +317,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#3-set-the-environment-variables" class="md-nav__link">
     <span class="md-ellipsis">
       3. Set the Environment Variables
@@ -328,8 +326,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#4-start-the-development-server" class="md-nav__link">
     <span class="md-ellipsis">
       4. Start the Development Server
@@ -337,9 +335,13 @@
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's Next?
+    </span>
+  </a>
   
 </li>
       
@@ -379,11 +381,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../work-with-MCP-server/" class="md-nav__link">
+      <a href="../work-with-mcp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Work with MCP Server
+    Work with MCP
     
   </span>
   
@@ -439,16 +441,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#get-started" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get started
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Get started">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
       Prerequisites
@@ -456,8 +448,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#1-clone-the-repository" class="md-nav__link">
     <span class="md-ellipsis">
       1. Clone the Repository
@@ -465,8 +457,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#2-install-the-dependencies" class="md-nav__link">
     <span class="md-ellipsis">
       2. Install the Dependencies
@@ -474,8 +466,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#3-set-the-environment-variables" class="md-nav__link">
     <span class="md-ellipsis">
       3. Set the Environment Variables
@@ -483,8 +475,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#4-start-the-development-server" class="md-nav__link">
     <span class="md-ellipsis">
       4. Start the Development Server
@@ -492,9 +484,13 @@
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's Next?
+    </span>
+  </a>
   
 </li>
       
@@ -516,80 +512,150 @@
 
   <h1>Get Started</h1>
 
-<h2 id="get-started">Get started</h2>
-<h3 id="prerequisites">Prerequisites</h3>
-<p>Make sure you have Python 3.12 or higher versions installed and set up the <a href="https://github.com/isoftstone-data-intelligence-ai/efflux-backend?tab=readme-ov-file#quick-start">efflux backend service</a>.</p>
-<h3 id="1-clone-the-repository">1. Clone the Repository</h3>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>Make sure the following dependencies have been installed:</p>
+<ul>
+<li>
+<p>Python 3.12 or higher versions</p>
+</li>
+<li>
+<p>Node.js 18 or higher versions</p>
+</li>
+<li>
+<p><a href="https://git-scm.com/downloads">Git</a></p>
+</li>
+<li>
+<p><a href="https://github.com/isoftstone-data-intelligence-ai/efflux-backend?tab=readme-ov-file#quick-start">Efflux backend service</a></p>
+</li>
+</ul>
+<h2 id="1-clone-the-repository">1. Clone the Repository</h2>
 <p>In your terminal:</p>
-<pre><code>git clone https://github.com/isoftstone-data-intelligence-ai/efflux-frontend.git
-</code></pre>
-<h3 id="2-install-the-dependencies">2. Install the Dependencies</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>git clone https://github.com/isoftstone-data-intelligence-ai/efflux-frontend.git
+</code></pre></div></td></tr></table></div>
+<h2 id="2-install-the-dependencies">2. Install the Dependencies</h2>
 <p>Enter the repository:</p>
-<pre><code>cd efflux-frontend
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>cd efflux-frontend
+</code></pre></div></td></tr></table></div>
 <p>Run the following to install the required dependencies:</p>
-<pre><code>npm i
-</code></pre>
-<h3 id="3-set-the-environment-variables">3. Set the Environment Variables</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>npm i
+</code></pre></div></td></tr></table></div>
+<h2 id="3-set-the-environment-variables">3. Set the Environment Variables</h2>
 <p>Create a <code>.env.local</code> file and set the following:</p>
-<pre><code class="language-sh"># Get your API key here - https://e2b.dev/
-E2B_API_KEY=&quot;your-e2b-api-key&quot;
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Get your API key here - https://e2b.dev/</span>
+<span class="nv">E2B_API_KEY</span><span class="o">=</span><span class="s2">&quot;your-e2b-api-key&quot;</span>
 
-# Get your Azure API key here https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource?tabs=portal
-AZURE_API_KEY=&quot;your-azure-api-key&quot;
+<span class="c1"># Get your Azure API key here https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource?tabs=portal</span>
+<span class="nv">AZURE_API_KEY</span><span class="o">=</span><span class="s2">&quot;your-azure-api-key&quot;</span>
 
-# API URL
-NEXT_PUBLIC_API_URL=&quot;your-backend-service-url&quot;
+<span class="c1"># API URL</span>
+<span class="nv">NEXT_PUBLIC_API_URL</span><span class="o">=</span><span class="s2">&quot;your-backend-service-url&quot;</span>
 
-# OpenAI API Key
-OPENAI_API_KEY=
+<span class="c1"># OpenAI API Key</span>
+<span class="nv">OPENAI_API_KEY</span><span class="o">=</span>
 
-# Other providers
-ANTHROPIC_API_KEY=
-GROQ_API_KEY=
-FIREWORKS_API_KEY=
-TOGETHER_API_KEY=
-GOOGLE_AI_API_KEY=
-GOOGLE_VERTEX_CREDENTIALS=
-MISTRAL_API_KEY=
-XAI_API_KEY=
+<span class="c1"># Other providers</span>
+<span class="nv">ANTHROPIC_API_KEY</span><span class="o">=</span>
+<span class="nv">GROQ_API_KEY</span><span class="o">=</span>
+<span class="nv">FIREWORKS_API_KEY</span><span class="o">=</span>
+<span class="nv">TOGETHER_API_KEY</span><span class="o">=</span>
+<span class="nv">GOOGLE_AI_API_KEY</span><span class="o">=</span>
+<span class="nv">GOOGLE_VERTEX_CREDENTIALS</span><span class="o">=</span>
+<span class="nv">MISTRAL_API_KEY</span><span class="o">=</span>
+<span class="nv">XAI_API_KEY</span><span class="o">=</span>
 
-### Optional env vars
+<span class="c1">### Optional env vars</span>
 
-# Domain of the site
-NEXT_PUBLIC_SITE_URL=
+<span class="c1"># Domain of the site</span>
+<span class="nv">NEXT_PUBLIC_SITE_URL</span><span class="o">=</span>
 
-# Disabling API key and base URL input in the chat
-NEXT_PUBLIC_NO_API_KEY_INPUT=
-NEXT_PUBLIC_NO_BASE_URL_INPUT=
+<span class="c1"># Disabling API key and base URL input in the chat</span>
+<span class="nv">NEXT_PUBLIC_NO_API_KEY_INPUT</span><span class="o">=</span>
+<span class="nv">NEXT_PUBLIC_NO_BASE_URL_INPUT</span><span class="o">=</span>
 
-# Rate limit
-RATE_LIMIT_MAX_REQUESTS=
-RATE_LIMIT_WINDOW=
+<span class="c1"># Rate limit</span>
+<span class="nv">RATE_LIMIT_MAX_REQUESTS</span><span class="o">=</span>
+<span class="nv">RATE_LIMIT_WINDOW</span><span class="o">=</span>
 
-# Vercel/Upstash KV (short URLs, rate limiting)
-KV_REST_API_URL=
-KV_REST_API_TOKEN=
+<span class="c1"># Vercel/Upstash KV (short URLs, rate limiting)</span>
+<span class="nv">KV_REST_API_URL</span><span class="o">=</span>
+<span class="nv">KV_REST_API_TOKEN</span><span class="o">=</span>
 
-# Supabase (auth)
-SUPABASE_URL=
-SUPABASE_ANON_KEY=
+<span class="c1"># Supabase (auth)</span>
+<span class="nv">SUPABASE_URL</span><span class="o">=</span>
+<span class="nv">SUPABASE_ANON_KEY</span><span class="o">=</span>
 
-# PostHog (analytics)
-NEXT_PUBLIC_POSTHOG_KEY=
-NEXT_PUBLIC_POSTHOG_HOST=
-</code></pre>
-<h3 id="4-start-the-development-server">4. Start the Development Server</h3>
-<pre><code>npm run dev
-</code></pre>
+<span class="c1"># PostHog (analytics)</span>
+<span class="nv">NEXT_PUBLIC_POSTHOG_KEY</span><span class="o">=</span>
+<span class="nv">NEXT_PUBLIC_POSTHOG_HOST</span><span class="o">=</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="4-start-the-development-server">4. Start the Development Server</h2>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>npm run dev
+</code></pre></div></td></tr></table></div>
 <p>Then you can access your local efflux at http://localhost:3000. The landing page looks like the following:</p>
 <p><img alt="Efflux landing page" src="../assets/landing-page.png" /></p>
+<h2 id="whats-next">What's Next?</h2>
+<ul>
+<li>
+<p><a href="../generate-code/">Generate Code</a></p>
+</li>
+<li>
+<p><a href="work-with-MCP-server.md">Work with MCP Server</a> </p>
+</li>
+</ul>
 
 
 
 
 
 
+
+  
+  
 
 
 
@@ -601,8 +667,16 @@ NEXT_PUBLIC_POSTHOG_HOST=
             </div>
           
           
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
         
       </main>
       
@@ -630,7 +704,7 @@ NEXT_PUBLIC_POSTHOG_HOST=
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "content.code.select", "content.code.annotate", "navigation.top", "content.tabs.link", "content.tooltips"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../assets/javascripts/bundle.f1b6f286.min.js"></script>
