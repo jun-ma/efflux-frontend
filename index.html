@@ -15,7 +15,7 @@
         <link rel="next" href="get-started/">
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="assets/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.3">
     
     
@@ -80,8 +80,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="." title="Efflux Docs" class="md-header__button md-logo" aria-label="Efflux Docs" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="assets/logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -213,8 +212,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="." title="Efflux Docs" class="md-nav__button md-logo" aria-label="Efflux Docs" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="assets/logo.svg" alt="logo">
 
     </a>
     Efflux Docs
@@ -324,6 +322,15 @@
   <a href="#contribute-to-efflux" class="md-nav__link">
     <span class="md-ellipsis">
       🤝Contribute to Efflux
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license" class="md-nav__link">
+    <span class="md-ellipsis">
+      📄 License
     </span>
   </a>
   
@@ -490,6 +497,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#license" class="md-nav__link">
+    <span class="md-ellipsis">
+      📄 License
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -519,15 +535,15 @@
 <p>a generative UI tool designed to help developers code UI components as simple as describing ideas. See <a href="generate-code/">Generate Code</a> for more details.</p>
 </li>
 <li>
-<p>an out-of-box MCP (Model Context Protocol) host to unlock the capabilities of connected MCP servers and loaded tools, enabling wider data access for large language models with standardized contexts. See <a href="work-with-mcp/">Work with MCP</a> for more details.</p>
+<p>an out-of-box MCP (Model Context Protocol) host to unlock the database interaction and business intelligence capabilities, by enabling wider data access and providing standardized context and tools to your LLMs. See <a href="work-with-mcp/">Work with MCP</a> for more details.</p>
 </li>
 </ul>
 <h4 id="core-features">✨Core Features</h4>
 <ul>
+<li><strong>Generative UI</strong></li>
 <li>
-<p><strong>Generative UI</strong></p>
+<p>Chat-based interface with chat history management</p>
 <ul>
-<li>Chat-based interface with chat history management</li>
 <li>Multi-LLM support (Claude, DeepSeek, etc.)</li>
 <li>Artifacts dynamic rendering engine</li>
 <li>Context memory management</li>
@@ -541,26 +557,9 @@
 <li>Agent routing management</li>
 </ul>
 </li>
-<li>
-<p><strong>Intelligent Extension</strong></p>
-<ul>
-<li>Plugin marketplace support</li>
-<li>Workflow orchestration engine</li>
-</ul>
-</li>
 </ul>
 <h4 id="architecture">🧩Architecture</h4>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code>EFFLUX
+<div class="highlight"><pre><span></span><code>EFFLUX
 ├── Core
 │   ├── MCP Adapter       # Protocol translation layer
 │   ├── Model Router      # Intelligent routing
@@ -571,7 +570,7 @@
 │   └── Agent Gateway     # Agent service gateway
 ├── Plugin System         # Extension module
 └── Web Interface         # Interactive website
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 <h4 id="get-started">🚀Get Started</h4>
 <p>Setting up Efflux is just a few clicks away. For more details, visit <a href="get-started/">Get started</a>.</p>
 <h4 id="contribute-to-efflux">🤝Contribute to Efflux</h4>
@@ -582,6 +581,8 @@
 <li>commit pull requests to improve codes and docs</li>
 </ul>
 <p>For more details, visit <a href="contribute/">Contribute to Efflux</a>.</p>
+<h4 id="license">📄 License</h4>
+<p>Efflux is licensed under the MIT License. This means you are free to use, modify, and distribute the software, subject to the terms and conditions of the MIT License. </p>
 
 
 
