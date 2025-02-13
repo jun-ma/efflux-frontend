@@ -513,25 +513,25 @@
 <ol>
 <li>
 <p>Clone the project.</p>
-<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:isoftstone-data-intelligence-ai/efflux-backend.git
+<div class="language-sh highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:isoftstone-data-intelligence-ai/efflux-backend.git
 <span class="nb">cd</span><span class="w"> </span>efflux-backend
 </code></pre></div>
 </li>
 <li>
 <p>Install <code>uv</code>.</p>
-<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>uv
+<div class="language-sh highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>uv
 </code></pre></div>
 </li>
 <li>
 <p>Reload dependencies.</p>
 </li>
 </ol>
-<div class="highlight"><pre><span></span><code>uv<span class="w"> </span>sync<span class="w"> </span>--reinstall
+<div class="language-sh highlight"><pre><span></span><code>uv<span class="w"> </span>sync<span class="w"> </span>--reinstall
 </code></pre></div>
 <ol>
 <li>Activate virtual environment.</li>
 </ol>
-<div class="highlight"><pre><span></span><code><span class="c1"># Activate virtual environment</span>
+<div class="language-sh highlight"><pre><span></span><code><span class="c1"># Activate virtual environment</span>
 <span class="nb">source</span><span class="w"> </span>.venv/bin/activate<span class="w">   </span><span class="c1"># MacOS/Linux</span>
 
 <span class="c1"># Deactivate when needed</span>
@@ -540,7 +540,7 @@ deactivate
 <ol>
 <li>Configure environment variables.</li>
 </ol>
-<div class="highlight"><pre><span></span><code><span class="c1"># Copy environment variable template</span>
+<div class="language-sh highlight"><pre><span></span><code><span class="c1"># Copy environment variable template</span>
 cp<span class="w"> </span>.env.sample<span class="w"> </span>.env
 
 <span class="c1"># Edit .env file, configure:</span>
@@ -550,7 +550,7 @@ cp<span class="w"> </span>.env.sample<span class="w"> </span>.env
 <ol>
 <li>Select the LLM.</li>
 </ol>
-<div class="highlight"><pre><span></span><code><span class="c1"># Edit core/common/container.py file</span>
+<div class="language-sh highlight"><pre><span></span><code><span class="c1"># Edit core/common/container.py file</span>
 <span class="c1"># Find the llm registration section, replace with any of the following models (Qwen by default):</span>
 <span class="c1"># - QwenLlm: Qwen</span>
 <span class="c1"># - AzureLlm: Azure OpenAI</span>
@@ -565,7 +565,7 @@ from<span class="w"> </span>core.llm.azure_open_ai<span class="w"> </span>import
 <ol>
 <li>Start PostgreSQL database.</li>
 </ol>
-<div class="highlight"><pre><span></span><code><span class="c1"># Method 1: If PostgreSQL is installed locally</span>
+<div class="language-sh highlight"><pre><span></span><code><span class="c1"># Method 1: If PostgreSQL is installed locally</span>
 <span class="c1"># Simply start your local PostgreSQL service</span>
 
 <span class="c1"># Method 2: Using Docker (example)</span>
@@ -581,7 +581,7 @@ docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </sp
 <ol>
 <li>Initialize the database.</li>
 </ol>
-<div class="highlight"><pre><span></span><code><span class="c1"># Create a new version and generate a migration file in alembic/versions</span>
+<div class="language-sh highlight"><pre><span></span><code><span class="c1"># Create a new version and generate a migration file in alembic/versions</span>
 alembic<span class="w"> </span>revision<span class="w"> </span>--autogenerate<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;initial migration&quot;</span>
 
 <span class="c1"># Preview SQL to be executed:</span>
@@ -593,24 +593,24 @@ alembic<span class="w"> </span>upgrade<span class="w"> </span>head
 <ol>
 <li>Start the service.</li>
 </ol>
-<div class="highlight"><pre><span></span><code>python<span class="w"> </span>-m<span class="w"> </span>uvicorn<span class="w"> </span>main:app<span class="w"> </span>--host<span class="w"> </span><span class="m">0</span>.0.0.0<span class="w"> </span>--port<span class="w"> </span><span class="m">8000</span>
+<div class="language-sh highlight"><pre><span></span><code>python<span class="w"> </span>-m<span class="w"> </span>uvicorn<span class="w"> </span>main:app<span class="w"> </span>--host<span class="w"> </span><span class="m">0</span>.0.0.0<span class="w"> </span>--port<span class="w"> </span><span class="m">8000</span>
 </code></pre></div>
 <h4 id="set-up-frontend-service">Set up Frontend Service</h4>
 <ol>
 <li>Clone the repository.</li>
 </ol>
-<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/isoftstone-data-intelligence-ai/efflux-frontend.git
+<div class="language-sh highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/isoftstone-data-intelligence-ai/efflux-frontend.git
 </code></pre></div>
 <ol>
 <li>Install the dependencies.</li>
 </ol>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>efflux-frontend
+<div class="language-sh highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>efflux-frontend
 npm<span class="w"> </span>i
 </code></pre></div>
 <ol>
 <li>Create a <code>.env.local</code> file and set the environment variables as follows:</li>
 </ol>
-<div class="highlight"><pre><span></span><code><span class="c1"># Get your API key here - https://e2b.dev/</span>
+<div class="language-sh highlight"><pre><span></span><code><span class="c1"># Get your API key here - https://e2b.dev/</span>
 <span class="nv">E2B_API_KEY</span><span class="o">=</span><span class="s2">&quot;your-e2b-api-key&quot;</span>
 
 <span class="c1"># Get your Azure API key here https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource?tabs=portal</span>
@@ -660,7 +660,7 @@ npm<span class="w"> </span>i
 <ol>
 <li>Start the development server.</li>
 </ol>
-<div class="highlight"><pre><span></span><code>npm<span class="w"> </span>run<span class="w"> </span>dev
+<div class="language-sh highlight"><pre><span></span><code>npm<span class="w"> </span>run<span class="w"> </span>dev
 </code></pre></div>
 <p>Then you can access your local efflux at http://localhost:3000. The landing page looks like the following:</p>
 <p><img alt="Efflux landing page" src="../../assets/landing-page.png" /></p>

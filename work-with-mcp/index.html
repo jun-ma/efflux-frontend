@@ -459,8 +459,8 @@
 
 <p>Model Context Protocol (MCP) is an open standard that enables frontier LLMs to produce more relevant responses by safely interacting with external tools and resources where data lives.</p>
 <ul>
-<li><strong>Resources</strong>: Data (like API responses or file contents) that can be read by the selected LLM.</li>
-<li><strong>Tools</strong>: Functions that can be called by the selected LLM.</li>
+<li><strong>Resources</strong>: Data (like API responses or file contents) that can be read by your LLMs.</li>
+<li><strong>Tools</strong>: Functions that can be called by your LLMs.</li>
 </ul>
 <p>Efflux's native MCP support helps you build secure and controlled access to your external data sources and tools, and then chat with them to get grounded information. </p>
 <div class="admonition tip">
@@ -472,7 +472,7 @@
 <ol>
 <li>
 <p>Prepare a database file named <code>demo.db</code> in the root directory of the efflux-backend service. Let's say, the file contains the following data:</p>
-<div class="highlight"><pre><span></span><code>Product List
+<div class="language-text highlight"><pre><span></span><code>Product List
 
 | ID | Name       | Price  | Stock | Description                   |
 |----|------------|--------|-------|-------------------------------|
@@ -486,7 +486,7 @@
 <li>
 <p>Select <strong>MCP</strong> in the <strong>Tools</strong> dropdown of Efflux, and click the <strong>Settings</strong> icon to add an MCP server with the following parameters.</p>
 <p><img alt="Add MCP Server" src="../assets/add-mcp-server.png" /></p>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="language-json highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">    </span><span class="nt">&quot;sqlite&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uvx&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;args&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
@@ -501,7 +501,7 @@
 <li>
 <p>Select <strong>sqlite</strong> in the <strong>Servers</strong> dropdown, and prompt Efflux, for example, <code>list top 3 most expensive products</code>.</p>
 <p>Then you will get a response as follows:</p>
-<div class="highlight"><pre><span></span><code>Tool Calls: read_query Args: query: SELECT name, price FROM products ORDER BY price DESC LIMIT 3
+<div class="language-text highlight"><pre><span></span><code>Tool Calls: read_query Args: query: SELECT name, price FROM products ORDER BY price DESC LIMIT 3
 
 The top 3 most expensive products in your database are:
 
@@ -517,7 +517,7 @@ These products are listed in descending order based on their price.
 <li>
 <p>Continue to talk to Effllux based on your needs, for example, <code>can you provide a more structured reply with more information?</code>.</p>
 <p>Then you will get a response as follows:</p>
-<div class="highlight"><pre><span></span><code>Certainly! To provide a more detailed and structured reply, I will first retrieve comprehensive information for the top 3 most expensive products from the `products` table. Let&#39;s gather that information now.
+<div class="language-text highlight"><pre><span></span><code>Certainly! To provide a more detailed and structured reply, I will first retrieve comprehensive information for the top 3 most expensive products from the `products` table. Let&#39;s gather that information now.
 
 ### Top 3 Most Expensive Products
 
@@ -538,7 +538,7 @@ These products are listed with additional details including their stock levels a
 <ol>
 <li>
 <p>Prepare a python file named <code>addition-operator.py</code> to the <code>/core/mcp/server/</code> directory of the efflux-backend service. Let's say, the file contains the following script to perform an addition operation:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">fastmcp</span><span class="w"> </span><span class="kn">import</span> <span class="n">FastMCP</span>
+<div class="language-python highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">fastmcp</span><span class="w"> </span><span class="kn">import</span> <span class="n">FastMCP</span>
 
 
 <span class="c1"># Create an MCP server</span>
@@ -555,7 +555,7 @@ These products are listed with additional details including their stock levels a
 <li>
 <p>Select <strong>MCP</strong> in the <strong>Tools</strong> dropdown of Efflux, and click the <strong>Settings</strong> icon to add an MCP server with the following parameters.</p>
 <p><img alt="Add MCP Server" src="../assets/add-mcp-operator.png" /></p>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="language-json highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">    </span><span class="nt">&quot;Addition&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uvx&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;args&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
@@ -572,7 +572,7 @@ These products are listed with additional details including their stock levels a
 <li>
 <p>Select <strong>Addition</strong> in the <strong>Servers</strong> dropdown, and prompt Efflux, for example, <code>121+234=?</code>.</p>
 <p>Then you will get a response as follows:</p>
-<div class="highlight"><pre><span></span><code>Tool Calls: add Args: a: 121 b: 234
+<div class="language-text highlight"><pre><span></span><code>Tool Calls: add Args: a: 121 b: 234
 The result of adding 121 and 234 is 355.
 </code></pre></div>
 </li>
