@@ -457,12 +457,9 @@
 
   <h1>Work with MCP</h1>
 
-<p>Model Context Protocol (MCP) is an open standard that enables frontier LLMs to produce more relevant responses by safely interacting with external tools and resources where data lives.</p>
-<ul>
-<li><strong>Resources</strong>: Data (like API responses or file contents) that can be read by your LLMs.</li>
-<li><strong>Tools</strong>: Functions that can be called by your LLMs.</li>
-</ul>
-<p>Efflux's native MCP support helps you build secure and controlled access to your external data sources and tools, and then chat with them to get grounded information. </p>
+<p>Model Context Protocol (MCP) is an open standard that enables frontier LLMs to produce more relevant responses by safely interacting with external tools and resources where data lives. For more details, go to <a href="https://modelcontextprotocol.io/quickstart/server#core-mcp-concepts">MCP Concepts</a>.</p>
+<p>Many LLMs do not currently have the ability to access databases and customized tools, for example, fetch the forecasts and severe weather alerts. Efflux's native MCP support helps you build secure and controlled access to your external data sources and tools, and then chat with them to get grounded information. </p>
+<p><img alt="Efflux demo" src="../assets/fast-mcp-weather.gif" /></p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>For a comprehensive list of reference implementations of MCP servers, visit the <a href="https://github.com/modelcontextprotocol/servers">MCP SDK Repo</a>.</p>
@@ -486,6 +483,11 @@
 <li>
 <p>Select <strong>MCP</strong> in the <strong>Tools</strong> dropdown of Efflux, and click the <strong>Settings</strong> icon to add an MCP server with the following parameters.</p>
 <p><img alt="Add MCP Server" src="../assets/add-mcp-server.png" /></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Json</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
 <div class="language-json highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">    </span><span class="nt">&quot;sqlite&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uvx&quot;</span><span class="p">,</span>
@@ -500,7 +502,7 @@
 </li>
 <li>
 <p>Select <strong>sqlite</strong> in the <strong>Servers</strong> dropdown, and prompt Efflux, for example, <code>list top 3 most expensive products</code>.</p>
-<p>Then you will get a response as follows:</p>
+<p>Then you will get a response similar to the following:</p>
 <div class="language-text highlight"><pre><span></span><code>Tool Calls: read_query Args: query: SELECT name, price FROM products ORDER BY price DESC LIMIT 3
 
 The top 3 most expensive products in your database are:
@@ -517,6 +519,11 @@ These products are listed in descending order based on their price.
 <li>
 <p>Continue to talk to Effllux based on your needs, for example, <code>can you provide a more structured reply with more information?</code>.</p>
 <p>Then you will get a response as follows:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Output</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
 <div class="language-text highlight"><pre><span></span><code>Certainly! To provide a more detailed and structured reply, I will first retrieve comprehensive information for the top 3 most expensive products from the `products` table. Let&#39;s gather that information now.
 
 ### Top 3 Most Expensive Products
@@ -534,46 +541,202 @@ These products are listed with additional details including their stock levels a
 </li>
 </ol>
 <h4 id="connect-to-customized-tools">Connect to Customized Tools</h4>
-<p>This section introduces an example of how to set up an MCP connector to utilize a function using <a href="https://github.com/jlowin/fastmcp"><code>FastMCP</code></a>.</p>
+<p>This section introduces an example of how to set up an MCP connector to fetch weather forecasts and severe weather alerts using <a href="https://github.com/jlowin/fastmcp"><code>FastMCP</code></a>.</p>
 <ol>
 <li>
-<p>Prepare a python file named <code>addition-operator.py</code> to the <code>/core/mcp/server/</code> directory of the efflux-backend service. Let's say, the file contains the following script to perform an addition operation:</p>
-<div class="language-python highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">fastmcp</span><span class="w"> </span><span class="kn">import</span> <span class="n">FastMCP</span>
+<p>Prepare a python file named <code>weather.py</code> to the <code>/core/mcp/server/</code> directory of the efflux-backend service. The file should contain the following script:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Python</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<div class="language-python highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Any</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">httpx</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">fastmcp</span><span class="w"> </span><span class="kn">import</span> <span class="n">FastMCP</span>
 
+<span class="c1"># Initialize FastMCP server</span>
+<span class="n">mcp</span> <span class="o">=</span> <span class="n">FastMCP</span><span class="p">(</span><span class="s2">&quot;weather&quot;</span><span class="p">)</span>
 
-<span class="c1"># Create an MCP server</span>
-<span class="n">mcp</span> <span class="o">=</span> <span class="n">FastMCP</span><span class="p">(</span><span class="s2">&quot;Demo&quot;</span><span class="p">)</span>
+<span class="c1"># Constants</span>
+<span class="n">NWS_API_BASE</span> <span class="o">=</span> <span class="s2">&quot;https://api.weather.gov&quot;</span>
+<span class="n">USER_AGENT</span> <span class="o">=</span> <span class="s2">&quot;weather-app/1.0&quot;</span>
 
+<span class="c1"># Helper functions</span>
+<span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">make_nws_request</span><span class="p">(</span><span class="n">url</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Make a request to the NWS API with proper error handling.&quot;&quot;&quot;</span>
+    <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;User-Agent&quot;</span><span class="p">:</span> <span class="n">USER_AGENT</span><span class="p">,</span>
+        <span class="s2">&quot;Accept&quot;</span><span class="p">:</span> <span class="s2">&quot;application/geo+json&quot;</span>
+    <span class="p">}</span>
+    <span class="k">async</span> <span class="k">with</span> <span class="n">httpx</span><span class="o">.</span><span class="n">AsyncClient</span><span class="p">()</span> <span class="k">as</span> <span class="n">client</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">response</span> <span class="o">=</span> <span class="k">await</span> <span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mf">30.0</span><span class="p">)</span>
+            <span class="n">response</span><span class="o">.</span><span class="n">raise_for_status</span><span class="p">()</span>
+            <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+        <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span>
 
-<span class="c1"># Add an addition tool</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">format_alert</span><span class="p">(</span><span class="n">feature</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Format an alert feature into a readable string.&quot;&quot;&quot;</span>
+    <span class="n">props</span> <span class="o">=</span> <span class="n">feature</span><span class="p">[</span><span class="s2">&quot;properties&quot;</span><span class="p">]</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">Event: </span><span class="si">{</span><span class="n">props</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;event&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Unknown&#39;</span><span class="p">)</span><span class="si">}</span>
+<span class="s2">Area: </span><span class="si">{</span><span class="n">props</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;areaDesc&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Unknown&#39;</span><span class="p">)</span><span class="si">}</span>
+<span class="s2">Severity: </span><span class="si">{</span><span class="n">props</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;severity&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Unknown&#39;</span><span class="p">)</span><span class="si">}</span>
+<span class="s2">Description: </span><span class="si">{</span><span class="n">props</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;description&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;No description available&#39;</span><span class="p">)</span><span class="si">}</span>
+<span class="s2">Instructions: </span><span class="si">{</span><span class="n">props</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;instruction&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;No specific instructions provided&#39;</span><span class="p">)</span><span class="si">}</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="c1"># Implementing tool execution</span>
 <span class="nd">@mcp</span><span class="o">.</span><span class="n">tool</span><span class="p">()</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Add two numbers&quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">get_alerts</span><span class="p">(</span><span class="n">state</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Get weather alerts for a US state.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        state: Two-letter US state code (e.g. CA, NY)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">NWS_API_BASE</span><span class="si">}</span><span class="s2">/alerts/active/area/</span><span class="si">{</span><span class="n">state</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="k">await</span> <span class="n">make_nws_request</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">data</span> <span class="ow">or</span> <span class="s2">&quot;features&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;Unable to fetch alerts or no alerts found.&quot;</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;features&quot;</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="s2">&quot;No active alerts for this state.&quot;</span>
+
+    <span class="n">alerts</span> <span class="o">=</span> <span class="p">[</span><span class="n">format_alert</span><span class="p">(</span><span class="n">feature</span><span class="p">)</span> <span class="k">for</span> <span class="n">feature</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;features&quot;</span><span class="p">]]</span>
+    <span class="k">return</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">---</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">alerts</span><span class="p">)</span>
+
+<span class="nd">@mcp</span><span class="o">.</span><span class="n">tool</span><span class="p">()</span>
+<span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">get_forecast</span><span class="p">(</span><span class="n">latitude</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">longitude</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Get weather forecast for a location.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        latitude: Latitude of the location</span>
+<span class="sd">        longitude: Longitude of the location</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># First get the forecast grid endpoint</span>
+    <span class="n">points_url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">NWS_API_BASE</span><span class="si">}</span><span class="s2">/points/</span><span class="si">{</span><span class="n">latitude</span><span class="si">}</span><span class="s2">,</span><span class="si">{</span><span class="n">longitude</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="n">points_data</span> <span class="o">=</span> <span class="k">await</span> <span class="n">make_nws_request</span><span class="p">(</span><span class="n">points_url</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">points_data</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;Unable to fetch forecast data for this location.&quot;</span>
+
+    <span class="c1"># Get the forecast URL from the points response</span>
+    <span class="n">forecast_url</span> <span class="o">=</span> <span class="n">points_data</span><span class="p">[</span><span class="s2">&quot;properties&quot;</span><span class="p">][</span><span class="s2">&quot;forecast&quot;</span><span class="p">]</span>
+    <span class="n">forecast_data</span> <span class="o">=</span> <span class="k">await</span> <span class="n">make_nws_request</span><span class="p">(</span><span class="n">forecast_url</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">forecast_data</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;Unable to fetch detailed forecast.&quot;</span>
+
+    <span class="c1"># Format the periods into a readable forecast</span>
+    <span class="n">periods</span> <span class="o">=</span> <span class="n">forecast_data</span><span class="p">[</span><span class="s2">&quot;properties&quot;</span><span class="p">][</span><span class="s2">&quot;periods&quot;</span><span class="p">]</span>
+    <span class="n">forecasts</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">period</span> <span class="ow">in</span> <span class="n">periods</span><span class="p">[:</span><span class="mi">5</span><span class="p">]:</span>  <span class="c1"># Only show next 5 periods</span>
+        <span class="n">forecast</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="si">{</span><span class="n">period</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">:</span>
+<span class="s2">Temperature: </span><span class="si">{</span><span class="n">period</span><span class="p">[</span><span class="s1">&#39;temperature&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">°</span><span class="si">{</span><span class="n">period</span><span class="p">[</span><span class="s1">&#39;temperatureUnit&#39;</span><span class="p">]</span><span class="si">}</span>
+<span class="s2">Wind: </span><span class="si">{</span><span class="n">period</span><span class="p">[</span><span class="s1">&#39;windSpeed&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">period</span><span class="p">[</span><span class="s1">&#39;windDirection&#39;</span><span class="p">]</span><span class="si">}</span>
+<span class="s2">Forecast: </span><span class="si">{</span><span class="n">period</span><span class="p">[</span><span class="s1">&#39;detailedForecast&#39;</span><span class="p">]</span><span class="si">}</span>
+<span class="s2">&quot;&quot;&quot;</span>
+        <span class="n">forecasts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">forecast</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">---</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">forecasts</span><span class="p">)</span>
+
+<span class="c1"># Running the server</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<span class="c1"># Initialize and run the server</span>
+<span class="n">mcp</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">transport</span><span class="o">=</span><span class="s1">&#39;stdio&#39;</span><span class="p">)</span>
 </code></pre></div>
 </li>
 <li>
 <p>Select <strong>MCP</strong> in the <strong>Tools</strong> dropdown of Efflux, and click the <strong>Settings</strong> icon to add an MCP server with the following parameters.</p>
-<p><img alt="Add MCP Server" src="../assets/add-mcp-operator.png" /></p>
+<p><img alt="Add MCP Server" src="../assets/fast-mcp-weather.png" /></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Json</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
 <div class="language-json highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;Addition&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;weather&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uvx&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;args&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">        </span><span class="s2">&quot;--with&quot;</span><span class="p">,</span>
 <span class="w">        </span><span class="s2">&quot;fastmcp&quot;</span><span class="p">,</span>
 <span class="w">        </span><span class="s2">&quot;fastmcp&quot;</span><span class="p">,</span>
 <span class="w">        </span><span class="s2">&quot;run&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="s2">&quot;./core/mcp/server/addition-operator.py&quot;</span>
+<span class="w">        </span><span class="s2">&quot;./core/mcp/server/weather.py&quot;</span>
 <span class="w">        </span><span class="p">]</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
 </li>
 <li>
-<p>Select <strong>Addition</strong> in the <strong>Servers</strong> dropdown, and prompt Efflux, for example, <code>121+234=?</code>.</p>
-<p>Then you will get a response as follows:</p>
-<div class="language-text highlight"><pre><span></span><code>Tool Calls: add Args: a: 121 b: 234
-The result of adding 121 and 234 is 355.
+<p>Select <strong>weather</strong> in the <strong>Servers</strong> dropdown, and prompt Efflux, for example, <code>What are the active weather alerts in NY?</code>.</p>
+<p>Then you will get a response similar to the following:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:1"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Output</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<div class="language-text highlight"><pre><span></span><code>Here are the active weather alerts for New York (NY):
+
+**Special Weather Statement**
+
+- Area: Eastern Clinton, Southern Franklin, Western Clinton, Grand Isle, Western Franklin, Western Chittenden, Lamoille, Eastern Franklin
+
+- Severity: Moderate
+
+- Description: A snow squall was reported with winds 35 mph or greater and visibility less than a mile.
+
+- Instructions: Hazardous driving conditions due to rapid visibility reduction and potentially icy roads. Travel is not advised during this snow squall.
+
+
+**Lake Effect Snow Warning**
+
+- Area: Southern Herkimer
+
+- Severity: Extreme
+
+- Description: Heavy lake effect snow expected with total accumulations between 2 and 6 inches, up to 7 to 8 inches in some areas. Winds gusting as high as 50 mph.
+
+- Instructions: Plan on slippery road conditions and hazardous commutes. Be prepared for rapid changes in weather, visibility, and road conditions.
+
+
+**Wind Advisory**
+
+- Area: Multiple counties including Northern Berkshire, Southern Berkshire, Eastern Rensselaer, Eastern Columbia, Bennington, Western Windham, Eastern Windham, Northern Litchfield, Southern Herkimer, etc.
+
+- Severity: Moderate
+
+- Description: West winds 15 to 25 mph with gusts up to 40 to 55 mph expected.
+
+- Instructions: Gusty winds will blow around unsecured objects. Tree limbs could be blown down and a few power outages may result. Use extra caution while driving.
+
+
+**Winter Weather Advisory**
+
+- Area: Chautauqua, Cattaraugus, Southern Erie, Wyoming, Wayne
+
+- Severity: Moderate
+
+- Description: Additional snow accumulations of 2 to 6 inches, with winds gusting as high as 35 mph.
+
+- Instructions: Travel will be difficult with areas of blowing snow significantly reducing visibility. Slow down and use caution while driving.
+
+
+**Lake Effect Snow Warning**
+
+- Area: Northern Cayuga, Oswego
+
+- Severity: Extreme
+
+- Description: Total snow accumulations 7 to 14 inches in the most persistent lake snows. Winds gusting 35 to 45 mph.
+
+- Instructions: Travel will be very difficult with hazardous conditions impacting morning and evening commutes. Be prepared for rapidly changing road conditions and visibilities.
+
+
+These alerts indicate severe winter weather conditions across various parts of New York State. If you&#39;re in any of these areas, please take necessary precautions, especially if traveling. Keep an eye on local news and weather updates for real-time information.
 </code></pre></div>
 </li>
 </ol>
