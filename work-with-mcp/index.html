@@ -448,6 +448,7 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
+    
                   
 
 
@@ -544,8 +545,48 @@ These products are listed with additional details including their stock levels a
 <p>This section introduces an example of how to set up an MCP connector to fetch weather forecasts and severe weather alerts using <a href="https://github.com/jlowin/fastmcp"><code>FastMCP</code></a>.</p>
 <ol>
 <li>
-<p>Prepare a python file named <code>weather.py</code> to the <code>/core/mcp/server/</code> directory of the efflux-backend service. The file should contain the following script:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Python</label></div>
+<p>Create and set up your project under the directory of your efflux-backend repo.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">MacOS/Linux</label><label for="__tabbed_3_2">Windows</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-sh highlight"><pre><span></span><code><span class="c1"># Create a new directory for your project</span>
+uv<span class="w"> </span>init<span class="w"> </span>weather
+<span class="nb">cd</span><span class="w"> </span>weather
+
+<span class="c1"># Create virtual environment and activate it</span>
+uv<span class="w"> </span>venv
+<span class="nb">source</span><span class="w"> </span>.venv/bin/activate
+
+<span class="c1"># Install dependencies</span>
+uv<span class="w"> </span>add<span class="w"> </span><span class="s2">&quot;mcp[cli]&quot;</span><span class="w"> </span>httpx
+
+<span class="c1"># Create your server file</span>
+<span class="nb">cd</span><span class="w"> </span>../core/mcp/server
+touch<span class="w"> </span>weather.py
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-sh highlight"><pre><span></span><code><span class="c1"># Create a new directory for your project</span>
+uv<span class="w"> </span>init<span class="w"> </span>weather
+<span class="nb">cd</span><span class="w"> </span>weather
+
+<span class="c1"># Create virtual environment and activate it</span>
+uv<span class="w"> </span>venv
+.venv<span class="se">\S</span>cripts<span class="se">\a</span>ctivate
+
+<span class="c1"># Install dependencies</span>
+uv<span class="w"> </span>add<span class="w"> </span>mcp<span class="o">[</span>cli<span class="o">]</span><span class="w"> </span>httpx
+
+<span class="c1"># Create your server file</span>
+new-item<span class="w"> </span>./core/mcp/server/weather.py
+</code></pre></div>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>Paste the following content to the <code>/core/mcp/server/weather.py</code> file. </p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Python</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block"></div>
 </div>
@@ -635,7 +676,7 @@ These products are listed with additional details including their stock levels a
     <span class="k">for</span> <span class="n">period</span> <span class="ow">in</span> <span class="n">periods</span><span class="p">[:</span><span class="mi">5</span><span class="p">]:</span>  <span class="c1"># Only show next 5 periods</span>
         <span class="n">forecast</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
 <span class="si">{</span><span class="n">period</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">:</span>
-<span class="s2">Temperature: </span><span class="si">{</span><span class="n">period</span><span class="p">[</span><span class="s1">&#39;temperature&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">°</span><span class="si">{</span><span class="n">period</span><span class="p">[</span><span class="s1">&#39;temperatureUnit&#39;</span><span class="p">]</span><span class="si">}</span>
+<span class="s2">Temperature: </span><span class="si">{</span><span class="n">period</span><span class="p">[</span><span class="s1">&#39;temperature&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">period</span><span class="p">[</span><span class="s1">&#39;temperatureUnit&#39;</span><span class="p">]</span><span class="si">}</span>
 <span class="s2">Wind: </span><span class="si">{</span><span class="n">period</span><span class="p">[</span><span class="s1">&#39;windSpeed&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">period</span><span class="p">[</span><span class="s1">&#39;windDirection&#39;</span><span class="p">]</span><span class="si">}</span>
 <span class="s2">Forecast: </span><span class="si">{</span><span class="n">period</span><span class="p">[</span><span class="s1">&#39;detailedForecast&#39;</span><span class="p">]</span><span class="si">}</span>
 <span class="s2">&quot;&quot;&quot;</span>
@@ -652,7 +693,7 @@ These products are listed with additional details including their stock levels a
 <li>
 <p>Select <strong>MCP</strong> in the <strong>Tools</strong> dropdown of Efflux, and click the <strong>Settings</strong> icon to add an MCP server with the following parameters.</p>
 <p><img alt="Add MCP Server" src="../assets/fast-mcp-weather.png" /></p>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Json</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:1"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Json</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block"></div>
 </div>
@@ -674,7 +715,7 @@ These products are listed with additional details including their stock levels a
 <li>
 <p>Select <strong>weather</strong> in the <strong>Servers</strong> dropdown, and prompt Efflux, for example, <code>What are the active weather alerts in NY?</code>.</p>
 <p>Then you will get a response similar to the following:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="5:1"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Output</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Output</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block"></div>
 </div>
@@ -756,6 +797,13 @@ These alerts indicate severe winter weather conditions across various parts of N
 
 
                 
+    <div id="feedback">
+        <p>Was this page helpful?</p>
+        <button id="feedback-yes">👍 Yes</button>
+        <button id="feedback-no">👎 No</button>
+        <p id="feedback-message" style="display:none;">Thanks for your feedback!</p>
+    </div>
+
               </article>
             </div>
           
@@ -801,6 +849,8 @@ These alerts indicate severe winter weather conditions across various parts of N
     
     
       <script src="../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+        <script src="../docs/javascripts/feedback.js"></script>
       
     
   </body>

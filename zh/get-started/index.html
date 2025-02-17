@@ -484,6 +484,7 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
+    
                   
 
 
@@ -505,41 +506,36 @@
 <li>
 <p><a href="https://git-scm.com/downloads">Git</a></p>
 </li>
-<li>
-<p><a href="https://github.com/isoftstone-data-intelligence-ai/efflux-backend?tab=readme-ov-file#quick-start">Efflux backend service</a></p>
-</li>
 </ul>
 <h4 id="set-up-backend-service">Set up Backend Service</h4>
 <ol>
 <li>
-<p>Clone the project.</p>
+<p>Clone the <a href="https://github.com/isoftstone-data-intelligence-ai/efflux-backend">efflux-backend repo</a>.</p>
 <div class="language-sh highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:isoftstone-data-intelligence-ai/efflux-backend.git
-<span class="nb">cd</span><span class="w"> </span>efflux-backend
 </code></pre></div>
 </li>
 <li>
 <p>Install <code>uv</code>.</p>
-<div class="language-sh highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>uv
+<div class="language-sh highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>efflux-backend
+pip<span class="w"> </span>install<span class="w"> </span>uv
 </code></pre></div>
 </li>
 <li>
 <p>Reload dependencies.</p>
-</li>
-</ol>
 <div class="language-sh highlight"><pre><span></span><code>uv<span class="w"> </span>sync<span class="w"> </span>--reinstall
 </code></pre></div>
-<ol>
-<li>Activate virtual environment.</li>
-</ol>
+</li>
+<li>
+<p>Activate your virtual environment.</p>
 <div class="language-sh highlight"><pre><span></span><code><span class="c1"># Activate virtual environment</span>
 <span class="nb">source</span><span class="w"> </span>.venv/bin/activate<span class="w">   </span><span class="c1"># MacOS/Linux</span>
 
 <span class="c1"># Deactivate when needed</span>
 deactivate
 </code></pre></div>
-<ol>
-<li>Configure environment variables.</li>
-</ol>
+</li>
+<li>
+<p>Configure environment variables.</p>
 <div class="language-sh highlight"><pre><span></span><code><span class="c1"># Copy environment variable template</span>
 cp<span class="w"> </span>.env.sample<span class="w"> </span>.env
 
@@ -547,9 +543,9 @@ cp<span class="w"> </span>.env.sample<span class="w"> </span>.env
 <span class="c1"># 1. Database connection info (DATABASE_NAME, DATABASE_USERNAME, DATABASE_PASSWORD)</span>
 <span class="c1"># 2. At least one LLM configuration (e.g., Azure OpenAI, Qwen, Doubao, or Moonshot)</span>
 </code></pre></div>
-<ol>
-<li>Select the LLM.</li>
-</ol>
+</li>
+<li>
+<p>Select your LLM.</p>
 <div class="language-sh highlight"><pre><span></span><code><span class="c1"># Edit core/common/container.py file</span>
 <span class="c1"># Find the llm registration section, replace with any of the following models (Qwen by default):</span>
 <span class="c1"># - QwenLlm: Qwen</span>
@@ -562,25 +558,25 @@ from<span class="w"> </span>core.llm.azure_open_ai<span class="w"> </span>import
 <span class="c1"># ...</span>
 <span class="nv">llm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>providers.Singleton<span class="o">(</span>AzureLlm<span class="o">)</span>
 </code></pre></div>
-<ol>
-<li>Start PostgreSQL database.</li>
-</ol>
+</li>
+<li>
+<p>Start PostgreSQL database.</p>
 <div class="language-sh highlight"><pre><span></span><code><span class="c1"># Method 1: If PostgreSQL is installed locally</span>
 <span class="c1"># Simply start your local PostgreSQL service</span>
 
 <span class="c1"># Method 2: Using Docker (example)</span>
 docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span>local-postgres<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>-e<span class="w"> </span><span class="nv">POSTGRES_DB</span><span class="o">=</span>your_database_name<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>-e<span class="w"> </span><span class="nv">POSTGRES_USER</span><span class="o">=</span>your_username<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>-e<span class="w"> </span><span class="nv">POSTGRES_PASSWORD</span><span class="o">=</span>your_password<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>-p<span class="w"> </span><span class="m">5432</span>:5432<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>postgres
+<span class="w">  </span>-e<span class="w"> </span><span class="nv">POSTGRES_DB</span><span class="o">=</span>your_database_name<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-e<span class="w"> </span><span class="nv">POSTGRES_USER</span><span class="o">=</span>your_username<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-e<span class="w"> </span><span class="nv">POSTGRES_PASSWORD</span><span class="o">=</span>your_password<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-p<span class="w"> </span><span class="m">5432</span>:5432<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>postgres
 
 <span class="c1"># Note: Ensure database connection info matches the configuration in your .env file</span>
 </code></pre></div>
-<ol>
-<li>Initialize the database.</li>
-</ol>
+</li>
+<li>
+<p>Initialize the database.</p>
 <div class="language-sh highlight"><pre><span></span><code><span class="c1"># Create a new version and generate a migration file in alembic/versions</span>
 alembic<span class="w"> </span>revision<span class="w"> </span>--autogenerate<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;initial migration&quot;</span>
 
@@ -590,26 +586,28 @@ alembic<span class="w"> </span>upgrade<span class="w"> </span>head<span class="w
 <span class="c1"># If preview looks good, execute migration</span>
 alembic<span class="w"> </span>upgrade<span class="w"> </span>head
 </code></pre></div>
-<ol>
-<li>Start the service.</li>
-</ol>
+</li>
+<li>
+<p>Start the service.</p>
 <div class="language-sh highlight"><pre><span></span><code>python<span class="w"> </span>-m<span class="w"> </span>uvicorn<span class="w"> </span>main:app<span class="w"> </span>--host<span class="w"> </span><span class="m">0</span>.0.0.0<span class="w"> </span>--port<span class="w"> </span><span class="m">8000</span>
 </code></pre></div>
+</li>
+</ol>
 <h4 id="set-up-frontend-service">Set up Frontend Service</h4>
 <ol>
-<li>Clone the repository.</li>
-</ol>
+<li>
+<p>Clone the <a href="https://github.com/isoftstone-data-intelligence-ai/efflux-frontend">efflux-frontend repo</a>.</p>
 <div class="language-sh highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/isoftstone-data-intelligence-ai/efflux-frontend.git
 </code></pre></div>
-<ol>
-<li>Install the dependencies.</li>
-</ol>
+</li>
+<li>
+<p>Install the dependencies.</p>
 <div class="language-sh highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>efflux-frontend
 npm<span class="w"> </span>i
 </code></pre></div>
-<ol>
-<li>Create a <code>.env.local</code> file and set the environment variables as follows:</li>
-</ol>
+</li>
+<li>
+<p>Create a <code>.env.local</code> file and set the environment variables as follows:</p>
 <div class="language-sh highlight"><pre><span></span><code><span class="c1"># Get your API key here - https://e2b.dev/</span>
 <span class="nv">E2B_API_KEY</span><span class="o">=</span><span class="s2">&quot;your-e2b-api-key&quot;</span>
 
@@ -657,17 +655,19 @@ npm<span class="w"> </span>i
 <span class="nv">NEXT_PUBLIC_POSTHOG_KEY</span><span class="o">=</span>
 <span class="nv">NEXT_PUBLIC_POSTHOG_HOST</span><span class="o">=</span>
 </code></pre></div>
-<ol>
-<li>Start the development server.</li>
-</ol>
+</li>
+<li>
+<p>Start the development server.</p>
 <div class="language-sh highlight"><pre><span></span><code>npm<span class="w"> </span>run<span class="w"> </span>dev
 </code></pre></div>
 <p>Then you can access your local efflux at http://localhost:3000. The landing page looks like the following:</p>
 <p><img alt="Efflux landing page" src="../../assets/landing-page.png" /></p>
+</li>
+</ol>
 <h4 id="whats-next">What's Next?</h4>
 <ul>
 <li>
-<p><a href="../generate-code/">Generate Code</a></p>
+<p><a href="../generate-code/">Generate UI Code</a></p>
 </li>
 <li>
 <p><a href="../work-with-mcp/">Work with MCP</a> </p>
@@ -689,6 +689,13 @@ npm<span class="w"> </span>i
 
 
                 
+    <div id="feedback">
+        <p>Was this page helpful?</p>
+        <button id="feedback-yes">👍 Yes</button>
+        <button id="feedback-no">👎 No</button>
+        <p id="feedback-message" style="display:none;">Thanks for your feedback!</p>
+    </div>
+
               </article>
             </div>
           
@@ -734,6 +741,8 @@ npm<span class="w"> </span>i
     
     
       <script src="../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+        <script src="../../docs/javascripts/feedback.js"></script>
       
     
   </body>

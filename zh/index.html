@@ -292,6 +292,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#why-efflux" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌟Why Efflux?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#core-features" class="md-nav__link">
     <span class="md-ellipsis">
       ✨Core Features
@@ -322,15 +331,6 @@
   <a href="#contribute-to-efflux" class="md-nav__link">
     <span class="md-ellipsis">
       🤝Contribute to Efflux
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#license" class="md-nav__link">
-    <span class="md-ellipsis">
-      📄License
     </span>
   </a>
   
@@ -462,6 +462,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#why-efflux" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌟Why Efflux?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#core-features" class="md-nav__link">
     <span class="md-ellipsis">
       ✨Core Features
@@ -497,15 +506,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#license" class="md-nav__link">
-    <span class="md-ellipsis">
-      📄License
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -518,6 +518,7 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
+    
                   
 
 
@@ -528,51 +529,66 @@
   <h1>概览</h1>
 
 <h4 id="whats-efflux">What's Efflux?</h4>
-<p>Efflux, the next-generation AI interaction platform, is an advanced, lightweight, and flexible framework seamlessly integrating various AI-powered LLMs (large language models), generative front-end technologies, and MCP (Model Context Protocols) servers to achieve a new paradigm of deploying and scaling AI-driven applications.</p>
-<p>Simply put, Efflux can serve as:</p>
+<p>Efflux, the next-generation AI interaction platform, is a powerful, lightweight, and highly flexible framework that seamlessly integrates state-of-the-art LLMs (large language models), generative front-end technologies, and MCP (Model Context Protocols) servers. It redefines the way AI-driven applications are deployed and scaled, offering unparalleled efficiency and adaptability.</p>
+<p>In essence, Efflux can serve as:</p>
 <ul>
 <li>
-<p>a generative UI tool designed to help developers code UI components as simple as describing ideas. See <a href="generate-code/">Generate Code</a> for more details.</p>
+<p><strong>An LLM-powered chatbot</strong> that engages in natural conversations with users.</p>
 </li>
 <li>
-<p>an out-of-box MCP (Model Context Protocol) host to unlock the database interaction and business intelligence capabilities, by enabling wider data access and providing standardized context and tools to your LLMs. See <a href="work-with-mcp/">Work with MCP</a> for more details.</p>
+<p><strong>A text-to-UI and image-to-UI tool</strong> that helps developers create code snippets effortlessly —— simply by describing their ideas. Efflux can also render the generated UI code in real time, allowing you to immediately test and iterate. </p>
+<p><em>Explore more → <a href="generate-code/">Generate Code</a></em></p>
+</li>
+<li>
+<p><strong>A ready-to-use MCP (Model Context Protocol) host</strong>, unlocking your LLMs' potential and expanding more capabilities by enabling wider data access and integrating custom tools, including but not limited to database interaction and business intelligence.</p>
+<p><em>Explore more → <a href="work-with-mcp/">Work with MCP</a></em></p>
+</li>
+</ul>
+<h4 id="why-efflux">🌟Why Efflux?</h4>
+<p>Efflux empowers developers and enthusiasts to:</p>
+<ul>
+<li>
+<p><strong>Build Conversational AI Agents</strong></p>
+<p>Create human-like chatbots with contextual awareness and conversation history management.</p>
+</li>
+<li>
+<p><strong>Accelerate Development Workflows</strong></p>
+<p>Effortlessly generate code snippets - from UI components to APIs and full-stack modules.</p>
+</li>
+<li>
+<p><strong>Unlock Advanced Capabilities</strong></p>
+<p>Leverage MCP servers to seamlessly integrate databases, various tools, and more while maintaining data governance.</p>
 </li>
 </ul>
 <h4 id="core-features">✨Core Features</h4>
 <ul>
-<li>
-<p><strong>Generative UI</strong></p>
-<ul>
-<li>Chat-based interface with chat history management</li>
-<li>Multi-LLM support (Claude, DeepSeek, etc.)</li>
-<li>Artifacts dynamic rendering engine</li>
-<li>Context memory management</li>
-</ul>
-</li>
-<li>
-<p><strong>Native MCP Support</strong></p>
-<ul>
-<li>Parallel access to multiple MCP servers</li>
-<li>Custom protocol adapter</li>
-<li>Agent routing management</li>
-</ul>
-</li>
+<li>Intuitive chat-based interface with history management</li>
+<li>Multi-LLM support (Claude, DeepSeek, and many more)</li>
+<li>Native MCP integration with unlimited possibilities</li>
+<li>Dynamic artifact rendering engine</li>
+<li>Advanced context memory management</li>
 </ul>
 <h4 id="architecture">🧩Architecture</h4>
-<div class="language-text highlight"><pre><span></span><code>EFFLUX
+<div class="language-text highlight"><pre><span></span><code>Efflux
 ├── Core
-│   ├── MCP Adapter       # Protocol translation layer
-│   ├── Model Router      # Intelligent routing
-│   └── Context Manager   # Dialog context management
-├── Artifacts Engine      # Dynamic front-end rendering
+│   ├── MCP Manager           # MCP management
+│   ├── Model Router          # Intelligent routing
+│   └── Context Manager       # Conversation context management
 ├── Service Layer
-│   ├── LLM Services      # Multiple LLM access
-│   └── Agent Gateway     # Agent service gateway
-├── Plugin System         # Extension module
-└── Web Interface         # Interactive website
+│   ├── LLM Manager           # Multiple LLM management
+│   ├── Model Switching       # Model switching
+│   ├── Agent Node            # Agent node
+│   └── Intelligent Reasoning # Intelligent reasoning
+├── Extension
+│   └── Plugin System         # Pluggable extension
+└── Web                   
+    ├── Artifacts Engine      # Dynamic front-end rendering
+    ├── Web Interface         # Interactive interface
+    ├── UI Stream Response    # Streaming response
+    └── Sandbox Debugging     # Sandbox debugging
 </code></pre></div>
 <h4 id="get-started">🚀Get Started</h4>
-<p>Setting up Efflux is just a few clicks away. For more details, visit <a href="get-started/">Get started</a>.</p>
+<p>Setting up Efflux is just a few clicks away. For more details, visit <a href="get-started/">Get Started</a>.</p>
 <h4 id="contribute-to-efflux">🤝Contribute to Efflux</h4>
 <p>We’re committed to building Efflux as a collaborative, open-source project and ecosystem. Participation is not only welcomed – it's essential!</p>
 <p>Here's how you can get involved:</p>
@@ -581,8 +597,6 @@
 <li>commit pull requests to improve codes and docs</li>
 </ul>
 <p>For more details, visit <a href="contribute/">Contribute to Efflux</a>.</p>
-<h4 id="license">📄License</h4>
-<p>Efflux is licensed under the MIT License. This means you are free to use, modify, and distribute the software, subject to the terms and conditions of the MIT License. </p>
 
 
 
@@ -599,6 +613,13 @@
 
 
                 
+    <div id="feedback">
+        <p>Was this page helpful?</p>
+        <button id="feedback-yes">👍 Yes</button>
+        <button id="feedback-no">👎 No</button>
+        <p id="feedback-message" style="display:none;">Thanks for your feedback!</p>
+    </div>
+
               </article>
             </div>
           
@@ -644,6 +665,8 @@
     
     
       <script src="../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+        <script src="../docs/javascripts/feedback.js"></script>
       
     
   </body>
