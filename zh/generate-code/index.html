@@ -513,11 +513,30 @@
 
                 
     <div id="feedback">
+        <hr class="feedback-divider">
         <p>Was this page helpful?</p>
         <button id="feedback-yes">👍 Yes</button>
         <button id="feedback-no">👎 No</button>
         <p id="feedback-message" style="display:none;">Thanks for your feedback!</p>
     </div>
+    <style>
+    /* 自定义水平线样式 */
+    .feedback-divider {
+        border: 0;           /* 清除默认边框 */
+        height: 1px;         /* 控制线的高度 */
+        background: #ddd;    /* 灰色 */
+        margin: 1rem 0;      /* 上下边距 */
+    }
+    </style>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID'); // 替换为你的 GA 跟踪 ID
+    </script>
+  <script src="../../javascripts/feedback.js"></script>
 
               </article>
             </div>
